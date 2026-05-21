@@ -30,7 +30,7 @@ export default function DarkModeToggle() {
       onClick={() => setDark((d) => !d)}
       title={dark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
       aria-label={dark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
-      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-full border border-charcoal/30 dark:border-dk-blue/70 text-charcoal/70 dark:text-dk-blue dark:bg-dk-blue/10 hover:bg-charcoal/10 dark:hover:bg-dk-blue/20 transition-colors duration-200 select-none"
+      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-full border border-charcoal/30 dark:border-white/60 text-charcoal/70 dark:text-white dark:bg-white/10 hover:bg-charcoal/10 dark:hover:bg-white/20 transition-colors duration-200 select-none"
     >
       <span aria-hidden="true">{dark ? '☀' : '☾'}</span>
       {dark ? 'Modo claro' : 'Modo oscuro'}
