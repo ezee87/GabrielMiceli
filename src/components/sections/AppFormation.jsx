@@ -1,7 +1,3 @@
-import { useRef } from 'react'
-import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import gsap from 'gsap'
 import ScrollReveal from '../ui/ScrollReveal'
 import SectionEyebrow from '../ui/SectionEyebrow'
 import CTAButton from '../ui/CTAButton'
@@ -23,31 +19,8 @@ const features = [
 const schedule = ['09:00', '11:00', '20:00', '21:00', '22:00']
 
 export default function AppFormation() {
-  const sectionRef = useRef(null)
-
-  useGSAP(
-    () => {
-      const mm = gsap.matchMedia()
-      mm.add('(prefers-reduced-motion: no-preference)', () => {
-        gsap.from('.app-phone-wrap', {
-          opacity: 0,
-          y: 48,
-          scale: 0.94,
-          duration: 1.0,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: '.app-phone-wrap',
-            start: 'top 88%',
-            once: true,
-          },
-        })
-      })
-    },
-    { scope: sectionRef },
-  )
-
   return (
-    <section ref={sectionRef} className="bg-sand py-20 lg:py-28">
+    <section className="bg-sand py-20 lg:py-28">
       <div className="container mx-auto px-6 lg:px-10 max-w-6xl">
 
         {/* Header */}
@@ -64,7 +37,7 @@ export default function AppFormation() {
           </div>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
           {/* Columna izquierda: features + schedule */}
           <div>
@@ -88,7 +61,7 @@ export default function AppFormation() {
                 <p className="text-xs font-semibold tracking-widest uppercase text-turquoise mb-4">
                   Sesiones en vivo diarias
                 </p>
-                <div className="flex gap-2 flex-wrap justify-center">
+                <div className="flex gap-2 flex-wrap justify-center max-w-[300px] mx-auto">
                   {schedule.map((time) => (
                     <div
                       key={time}
@@ -120,9 +93,9 @@ export default function AppFormation() {
             </ScrollReveal>
           </div>
 
-          {/* Columna derecha: mockup de app / video flotante */}
-          <div className="flex justify-center lg:justify-end app-phone-wrap">
-            <div className="w-full max-w-[200px] lg:max-w-[220px]">
+          {/* Columna derecha: mockup de app / video */}
+          <ScrollReveal delay={0.2} className="flex justify-center pt-4 lg:pt-8">
+            <div className="w-full max-w-[260px] lg:max-w-[300px]">
               {/* Phone mockup — card flotante */}
               <div className="animate-float">
                 <div className="relative rounded-[2.5rem] bg-deep-slate border-4 border-deep-slate shadow-[0_30px_80px_-15px_rgba(11,61,74,0.45)] overflow-hidden aspect-[9/18]">
@@ -175,7 +148,7 @@ export default function AppFormation() {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>

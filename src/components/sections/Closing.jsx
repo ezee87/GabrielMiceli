@@ -116,16 +116,15 @@ export default function Closing() {
                   loading="lazy"
                   // Imagen requerida: /public/images/gabriel-lentes-cancun.jpg
                 />
-                {/* Overlay inferior suave */}
-                <div className="absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-ocean/40 to-transparent" />
-              </div>
-
-              {/* Cita debajo de la imagen — siempre legible */}
-              <div className="mt-4 px-1">
-                <p className="text-white/80 font-semibold text-sm leading-snug">
-                  "Te explico todo claro antes de que decidas."
-                </p>
-                <p className="text-white/45 text-xs mt-1">— Gabriel Miceli</p>
+                {/* Overlay inferior para contraste de la cita */}
+                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                {/* Cita superpuesta sobre la foto */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="text-white font-semibold text-sm leading-snug drop-shadow-lg">
+                    "Te explico todo claro antes de que decidas."
+                  </p>
+                  <p className="text-white/65 text-xs mt-1.5 drop-shadow-md">— Gabriel Miceli</p>
+                </div>
               </div>
 
             </div>

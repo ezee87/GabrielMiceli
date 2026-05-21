@@ -95,7 +95,7 @@ export default function Hero() {
           <img
             src="/images/gabriel-hero-balcon-cancun.jpeg"
             alt="Gabriel Miceli en Cancún, México"
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
             loading="eager"
             // Imagen requerida: /public/images/gabriel-hero-balcon-cancun.jpeg
           />

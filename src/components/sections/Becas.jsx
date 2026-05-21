@@ -112,18 +112,11 @@ export default function Becas() {
           </p>
         </ScrollReveal>
 
-        {/* Cards — nuevo layout: básica+intermedia a la izquierda, avanzada derecha */}
-        <div className="grid lg:grid-cols-[1fr_1.15fr] gap-6 lg:items-stretch" id="becas-grid">
-
-          {/* Columna izquierda: básica + intermedia con igual altura */}
-          <div className="grid lg:grid-rows-2 gap-6 lg:h-full">
-            <BecaCard beca={becas[0]} />
-            <BecaCard beca={becas[1]} />
-          </div>
-
-          {/* Columna derecha: avanzada destacada, más alta */}
-          <BecaCard beca={becas[2]} />
-
+        {/* Cards — 3 columnas en desktop, alineadas y estiradas */}
+        <div className="grid md:grid-cols-3 gap-6 items-stretch" id="becas-grid">
+          {becas.map((beca) => (
+            <BecaCard key={beca.id} beca={beca} />
+          ))}
         </div>
 
         <ScrollReveal delay={0.2}>
