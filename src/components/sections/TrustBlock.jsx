@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import ScrollReveal from '../ui/ScrollReveal'
 import SectionEyebrow from '../ui/SectionEyebrow'
 import CTAButton from '../ui/CTAButton'
+import { WHATSAPP_GENERAL_QUESTION_URL } from '../../constants'
 
 // Imagen de apoyo opcional: /public/images/gabriel-cuenta-trading-blurred.jpg
 // Solo usar como visual secundario, NUNCA como prueba de ganancias.
@@ -144,7 +145,7 @@ export default function TrustBlock() {
         {/* CTA */}
         <ScrollReveal delay={0.15}>
           <div className="flex flex-col items-center gap-3">
-            <CTAButton variant="primary-light" size="large">
+            <CTAButton variant="primary-light" size="large" href={WHATSAPP_GENERAL_QUESTION_URL}>
               Quiero entender cómo funciona
             </CTAButton>
             <p className="text-white/50 text-sm">

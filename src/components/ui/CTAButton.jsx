@@ -1,4 +1,4 @@
-import { WHATSAPP_GENERAL_URL } from '../../constants'
+import { WHATSAPP_RESERVE_URL } from '../../constants'
 
 /**
  * CTAButton — botón de conversión global.
@@ -40,7 +40,7 @@ export default function CTAButton({
     large: 'px-9 py-4 text-base',
   }
 
-  const url = href ?? WHATSAPP_GENERAL_URL
+  const url = href ?? WHATSAPP_RESERVE_URL
   const isExternal = url.startsWith('http')
 
   return (

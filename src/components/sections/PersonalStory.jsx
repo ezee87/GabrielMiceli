@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import SectionEyebrow from '../ui/SectionEyebrow'
 import CTAButton from '../ui/CTAButton'
 import ScrollReveal from '../ui/ScrollReveal'
+import { WHATSAPP_GENERAL_QUESTION_URL } from '../../constants'
 
 // Imagen requerida: /public/images/gabriel-laptop-cancun.jpg
 
@@ -87,7 +88,7 @@ export default function PersonalStory() {
 
             <ScrollReveal delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-3">
-                <CTAButton variant="primary-light" size="large">
+                <CTAButton variant="primary-light" size="large" href={WHATSAPP_GENERAL_QUESTION_URL}>
                   Quiero que me expliques
                 </CTAButton>
               </div>
