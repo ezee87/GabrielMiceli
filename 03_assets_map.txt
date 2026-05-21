@@ -1,0 +1,135 @@
+# Mapa de assets — Gabriel Miceli x Revolution
+
+Objetivo:
+Que Claude use las fotos y videos correctos en cada sección sin improvisar.
+
+## Carpeta sugerida
+
+public/
+  images/
+    gabriel-hero-balcon-cancun.jpg
+    gabriel-laptop-cancun.jpg
+    gabriel-cuenta-trading-blurred.jpg
+    gabriel-setup-trading-laptop.jpg
+    gabriel-lentes-cancun.jpg
+  videos/
+    revolution-app-demo.mp4
+
+## Assets y uso recomendado
+
+### 1. gabriel-hero-balcon-cancun.jpg
+
+Uso:
+Hero principal.
+
+Descripción:
+Foto de Gabriel parado en balcón con vista al agua en Cancún.
+
+Objetivo visual:
+Transmitir estilo de vida real, cercanía, libertad, Cancún y aspiración sin caer en lujo falso.
+
+Tratamiento:
+- Recorte vertical o horizontal según responsive.
+- Gabriel debe quedar visible y protagonista.
+- Dejar espacio para texto en desktop.
+- Overlay suave en azul profundo/turquesa si el texto va sobre la imagen.
+- No saturar excesivamente.
+- Mantener colores naturales del agua y la luz.
+
+### 2. gabriel-laptop-cancun.jpg
+
+Uso:
+Sección “Yo también empecé desde cero” o historia personal.
+
+Descripción:
+Gabriel sentado con laptop y vista al agua.
+
+Objetivo visual:
+Mostrar que trabaja/estudia desde un lugar aspiracional, pero de forma real y cercana.
+
+Tratamiento:
+- Card grande con bordes redondeados.
+- Puede tener un pequeño texto flotante: “+2 años y medio en Revolution”.
+- Evitar que parezca promesa de resultado.
+
+### 3. gabriel-cuenta-trading-blurred.jpg
+
+Uso:
+Solo como apoyo visual en bloque de confianza o trading operativo.
+
+Importante:
+Antes de usar esta imagen, ocultar:
+- saldo
+- ID
+- datos de cuenta
+- datos sensibles
+- cualquier número identificable
+
+Objetivo visual:
+Mostrar contexto de trading real sin usarlo como prueba de ganancias.
+
+Regla:
+No usar esta imagen como testimonio, resultado o promesa. Usarla solo como recurso visual secundario.
+
+Tratamiento:
+- Puede ir dentro de una card pequeña.
+- Agregar texto cercano: “Tu cuenta, tus datos, tu capital.”
+- No mostrar cifras.
+
+### 4. gabriel-setup-trading-laptop.jpg
+
+Uso:
+Sección app/formación o apoyo visual para “todo en una sola app”.
+
+Objetivo visual:
+Conectar la formación de Revolution con trading serio, clases, análisis y práctica.
+
+Tratamiento:
+- Card flotante al lado del video de la app.
+- Puede tener overlay con iconos de módulos, clases, evaluaciones.
+- Mantener estética premium, no técnica excesiva.
+
+### 5. gabriel-lentes-cancun.jpg
+
+Uso:
+Cierre o bloque personal.
+
+Objetivo visual:
+Autoridad personal, confianza y marca personal.
+
+Tratamiento:
+- Usar cerca del cierre con CTA final.
+- Puede ir con frase: “Te explico todo claro antes de que decidas.”
+
+### 6. revolution-app-demo.mp4
+
+Uso:
+Sección “Todo desde una app”.
+
+Objetivo:
+Mostrar que Revolution tiene app, módulos, comunidad, formación y recursos centralizados.
+
+Tratamiento:
+- Insertar en mockup o card tipo dispositivo.
+- Autoplay muted loop si es técnicamente viable.
+- Controles visibles si autoplay genera problemas.
+- No hacerlo demasiado grande en mobile si afecta performance.
+- Puede acompañarse con una animación sutil de card flotante.
+
+## Reglas generales para imágenes
+
+- Priorizar fotos reales de Gabriel.
+- Evitar stock photos.
+- Evitar estética “crypto bro”.
+- Evitar Lamborghinis, relojes, billetes, mansiones o lujo falso.
+- Mantener una estética Cancún premium: agua, luz, arena, azul, calma.
+- Las imágenes deben reforzar confianza, no promesas de dinero.
+
+## Optimización
+
+- Usar WebP si es posible.
+- Comprimir imágenes.
+- Hero en tamaño alto, pero optimizado.
+- Lazy load para imágenes debajo del hero.
+- Video optimizado y comprimido.
+- Incluir poster image para el video.

@@ -1,0 +1,95 @@
+# Prompt inicial para Claude Code
+
+Leé antes de escribir código:
+
+1. brief-landing.txt
+2. copy-landing.txt
+3. assets-map.txt
+4. visual-style.txt
+5. animation-direction.txt
+6. .claude/skills/distinctive-frontend/SKILL.md
+7. las skills GSAP instaladas, especialmente gsap-scrolltrigger, gsap-react y gsap-performance si están disponibles
+
+Usá distinctive-frontend como criterio visual principal, pero adaptado a este proyecto: premium tropical trading, Cancún, confianza, cercanía y conversión.
+
+Usá GSAP + ScrollTrigger solo donde aporte una transición premium. No sobreanimar. Priorizá performance mobile.
+
+Objetivo principal:
+Crear una landing moderna, premium y orientada a conversión para que el usuario haga clic en el CTA “Reservar mi beca”.
+
+No quiero:
+- landing tipo Beacons
+- página genérica de academia
+- estética crypto con neones
+- lujo falso
+- promesas de dinero fácil
+- plantilla genérica de IA
+- animaciones por decorar
+
+Quiero:
+- landing desarrollada
+- narrativa clara
+- fotos reales de Gabriel en Cancún
+- animaciones suaves
+- transiciones modernas
+- CTAs repetidos
+- sección de confianza muy fuerte
+- explicación clara de Exness y cuenta propia
+- plan de 1.000 USD destacado
+
+Stack:
+React + Tailwind + Framer Motion.
+Usar GSAP/ScrollTrigger solo si realmente mejora las transiciones sin afectar performance.
+Lenis opcional para smooth scroll, solo si no genera conflictos.
+
+Reglas de copy:
+- No prometer ganancias.
+- No decir “hacete rico”.
+- No decir “resultados garantizados”.
+- No usar WhatsApp en los botones.
+- Sí se puede mencionar WhatsApp en microcopy.
+- Repetir CTA en todas las secciones.
+- CTA principal: Reservar mi beca.
+- Destacar la beca de 1.000 USD como recomendada.
+- Explicar claramente que el dinero no va a Gabriel ni a Revolution, sino a la cuenta propia del usuario en Exness.
+- Resolver objeciones: miedo a estafa, falta de tiempo, falta de experiencia y miedo a perder dinero.
+- Incluir disclaimer: el trading implica riesgo y no hay resultados garantizados.
+
+Estructura de secciones:
+1. Hero con foto de Gabriel en Cancún.
+2. Bloque confianza: el dinero no va a Gabriel ni Revolution; queda en la cuenta propia del usuario en Exness.
+3. App y formación: módulos grabados, exámenes, comunidad, 5 clases en vivo por día y grabaciones.
+4. Historia personal breve de Gabriel.
+5. Becas: 300, 600 y 1.000 USD. Destacar 1.000 como recomendada.
+6. FAQs.
+7. Cierre: Solo quedan 10 becas disponibles este mes.
+
+Diseño:
+- Estética premium tropical trading.
+- Fondo warm white/sand.
+- Texto charcoal.
+- Acentos ocean blue/turquoise.
+- Detalles sutiles gold.
+- Fotos grandes.
+- Cards redondeadas.
+- Mucho aire.
+- Header o CTA sticky.
+- Sticky CTA mobile después del hero.
+
+Primero proponé:
+1. árbol de componentes,
+2. dirección visual,
+3. sistema de colores,
+4. sistema de animaciones,
+5. qué assets vas a usar por sección.
+
+Después implementá la landing completa.
+
+Al terminar, hacé una pasada de mejora enfocada en:
+- claridad del CTA
+- conversión
+- mobile
+- motion
+- performance
+- consistencia visual
+- cumplimiento de reglas de riesgo y confianza

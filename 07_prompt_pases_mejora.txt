@@ -1,0 +1,126 @@
+# Prompts para mejorar la landing por pasadas
+
+## Pasada 1 — Conversión
+
+Revisá la landing completa como especialista en conversión.
+
+Objetivo:
+Aumentar clics en el CTA “Reservar mi beca”.
+
+Evaluá:
+- si el CTA aparece lo suficientemente rápido
+- si los botones se repiten en los lugares correctos
+- si el hero explica la oferta en menos de 5 segundos
+- si la objeción de estafa está resuelta con claridad
+- si la falta de tiempo está resuelta
+- si la beca de 1.000 USD está suficientemente destacada
+- si el cierre con 10 becas genera urgencia sin parecer falso
+- si mobile tiene CTA sticky y buena legibilidad
+
+Reglas:
+- No cambiar el modelo de negocio.
+- No prometer ganancias.
+- No usar WhatsApp en los botones.
+- Mantener el estilo premium tropical trading.
+
+Implementá las mejoras necesarias.
+
+
+## Pasada 2 — Motion y transiciones
+
+Revisá la landing usando distinctive-frontend y las skills GSAP disponibles.
+
+Objetivo:
+Que la página se sienta más moderna, premium y desarrollada, sin sobreanimar.
+
+Mejorar:
+- entrada del hero
+- transición del hero al bloque de confianza
+- reveals de cards
+- app video section
+- plan de 1.000 USD
+- FAQs
+- cierre
+
+Usar:
+- Framer Motion para reveals y microinteracciones.
+- GSAP/ScrollTrigger solo para transiciones con valor real.
+- Respetar prefers-reduced-motion.
+- Evitar efectos pesados en mobile.
+
+No hacer:
+- neones
+- glitch
+- animaciones crypto
+- 3D innecesario
+- scroll que dificulte leer o hacer clic
+
+Implementá las mejoras necesarias.
+
+
+## Pasada 3 — Mobile first
+
+Revisá toda la landing en mobile.
+
+Objetivo:
+Que se vea y convierta excelente en celular.
+
+Chequear:
+- hero con CTA visible sin demasiado scroll
+- imágenes recortadas correctamente
+- texto legible
+- cards no demasiado largas
+- sticky CTA inferior
+- video optimizado
+- plan de 1.000 USD destacado
+- FAQs cómodas de abrir
+- performance
+
+Implementá mejoras de layout mobile sin romper desktop.
+
+
+## Pasada 4 — Confianza y objeciones
+
+Revisá toda la landing como usuario escéptico.
+
+Objeciones:
+- “¿Y si es una estafa?”
+- “¿A quién le doy mi plata?”
+- “No tengo tiempo.”
+- “No sé nada de trading.”
+- “¿Y si pierdo?”
+- “¿Por qué tendría que hablar con Gabriel?”
+
+Mejorar copy, microcopy o layout para responder esas dudas más rápido.
+
+Reglas:
+- Explicar que el capital va a la cuenta propia del usuario en Exness.
+- No inventar garantías.
+- No prometer rentabilidad.
+- Mantener tono claro y cercano.
+
+
+## Pasada 5 — Limpieza visual
+
+Revisá la landing como director de arte.
+
+Objetivo:
+Evitar estética genérica de IA y lograr una identidad más memorable.
+
+Usar:
+- tipografía con más carácter
+- pesos contrastados
+- fondos con profundidad sutil
+- paleta coherente Cancún/trading
+- mejores jerarquías
+- cards más premium
+- CTA visualmente consistente
+
+Evitar:
+- Inter/Roboto por defecto como única identidad
+- gradientes violeta/azul genéricos
+- exceso de blanco plano
+- diseño de academia genérica
+- estética financiera fría
+
+Implementá mejoras visuales manteniendo performance.

@@ -1,0 +1,108 @@
+# Instalación local de skills para Claude Code
+
+Objetivo:
+Trabajar 100% en local, sin subir el proyecto a GitHub, usando skills como contexto para que Claude diseñe y anime mejor la landing.
+
+Estructura recomendada del proyecto:
+
+gabriel-revolution-landing/
+  .claude/
+    skills/
+      distinctive-frontend/
+        SKILL.md
+      gsap-core/
+        SKILL.md
+      gsap-timeline/
+        SKILL.md
+      gsap-scrolltrigger/
+        SKILL.md
+      gsap-react/
+        SKILL.md
+      gsap-performance/
+        SKILL.md
+  brief-landing.txt
+  copy-landing.txt
+  assets-map.txt
+  visual-style.txt
+  animation-direction.txt
+  prompt-inicial-claude.txt
+  prompt-pases-mejora.txt
+  public/
+    images/
+    videos/
+  src/
+
+Skill actual que ya tenés:
+Si descargaste una carpeta llamada “Skills” con un archivo llamado distinctive-frontend.md, dejalo así:
+
+gabriel-revolution-landing/
+  .claude/
+    skills/
+      distinctive-frontend/
+        SKILL.md
+
+Pasos:
+1. Crear la carpeta `.claude/skills` dentro de la raíz del proyecto.
+2. Crear dentro una carpeta llamada `distinctive-frontend`.
+3. Renombrar el archivo `distinctive-frontend.md` a `SKILL.md`.
+4. Moverlo a `.claude/skills/distinctive-frontend/SKILL.md`.
+5. Cerrar y volver a abrir Claude Code si ya estaba abierto.
+
+Skills GSAP recomendadas:
+Usar el repo oficial de GreenSock:
+
+https://github.com/greensock/gsap-skills
+
+Formas de instalar:
+
+Opción 1 — Marketplace de Claude Code:
+En Claude Code ejecutar:
+
+/plugin marketplace add greensock/gsap-skills
+
+Opción 2 — npx:
+Desde la terminal:
+
+npx skills add https://github.com/greensock/gsap-skills
+
+Opción 3 — manual:
+1. Descargar ZIP desde el repo de GreenSock.
+2. Descomprimir.
+3. Copiar las carpetas dentro de `skills/` hacia:
+
+gabriel-revolution-landing/.claude/skills/
+
+Skills de GSAP que más convienen para esta landing:
+- gsap-core
+- gsap-timeline
+- gsap-scrolltrigger
+- gsap-react
+- gsap-performance
+
+No instalaría todo si no hace falta. Para esta landing, esas 5 son suficientes.
+
+Uso recomendado en el prompt:
+“Usá distinctive-frontend para dirección visual y GSAP ScrollTrigger solo donde aporte una transición premium. No sobreanimar. Priorizar performance mobile.”
+
+Stack recomendado:
+- React
+- Tailwind CSS
+- Framer Motion para reveals, microinteracciones y entrada de secciones
+- GSAP + ScrollTrigger para transiciones más cinematográficas, pinned sections, parallax sutil y scroll-linked motion
+- Lenis opcional para smooth scroll
+
+Importante:
+No usar GSAP para todo. Framer Motion es suficiente para muchas animaciones. GSAP debería usarse solo para:
+- hero cinematográfico
+- transición superpuesta entre secciones
+- parallax suave de fotos
+- pinned section de la app si aporta
+- reveal coordinado de planes
+- scroll progress / sticky CTA avanzado
+
+Evitar:
+- animaciones pesadas
+- efectos 3D innecesarios
+- neones crypto
+- estética “get rich quick”
+- scroll excesivamente experimental que dificulte leer o hacer clic

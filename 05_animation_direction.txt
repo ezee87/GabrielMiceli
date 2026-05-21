@@ -1,0 +1,190 @@
+# Dirección de animaciones y transiciones — Gabriel Miceli x Revolution
+
+## Principio general
+
+La landing debe sentirse moderna y premium, pero no sobreanimada.
+
+Objetivo de las animaciones:
+- guiar la atención al CTA
+- aumentar percepción de calidad
+- reforzar confianza
+- hacer que la página se sienta desarrollada
+- mantener lectura clara
+- mejorar mobile, no empeorarlo
+
+No convertir la landing en una demo técnica. La conversión es más importante que el efecto.
+
+## Stack recomendado
+
+Base:
+- Framer Motion para reveals, entradas, hover y acordeones.
+
+GSAP + ScrollTrigger:
+Usar solo para animaciones más cinematográficas:
+- hero
+- parallax suave
+- secciones que se superponen
+- pinned section de la app si aporta
+- reveal coordinado de cards/planes
+- progreso/sticky CTA si corresponde
+
+Lenis:
+Opcional para smooth scroll. Usar solo si no genera conflicto con ScrollTrigger.
+
+## Animaciones por sección
+
+### 1. Hero
+
+Objetivo:
+Impacto inicial, claridad y CTA visible.
+
+Animaciones:
+- Entrada escalonada del eyebrow, título, subtítulo, CTA y trust bullets.
+- Foto de Gabriel con fade + scale suave desde 1.04 a 1.
+- Overlay de luz/agua muy sutil.
+- CTA aparece rápido, no esperar demasiado.
+
+Timing:
+- Duración: 0.7s a 1.1s
+- Stagger: 0.08s a 0.14s
+- Ease: cubic-bezier(0.16, 1, 0.3, 1)
+
+No hacer:
+- animaciones lentas que retrasen el CTA
+- efectos de texto difíciles de leer
+- glitch, neon, crypto
+
+### 2. Transición Hero → Confianza
+
+Objetivo:
+Que el bloque anti-estafa se sienta importante.
+
+Animación sugerida:
+- La siguiente sección puede entrar con un pequeño overlap vertical, como una card grande que sube sobre el hero.
+- Usar ScrollTrigger o CSS sticky suave.
+- El título “No le das tu dinero a Gabriel ni a Revolution” debe aparecer con fuerza.
+
+Efecto:
+La sección de confianza debe sentirse como “la explicación clave”.
+
+### 3. Bloque de confianza
+
+Animaciones:
+- Frases “No me pagás a mí / No le transferís dinero a Revolution / No comprás una membresía carísima” pueden aparecer una por una.
+- Card destacada “Tu dinero queda en tu propia cuenta” con reveal y borde animado sutil.
+- CTA siempre visible al final del bloque.
+
+No hacer:
+- animación que parezca alerta de estafa
+- colores rojos agresivos
+- lenguaje visual de miedo
+
+### 4. App + formación
+
+Objetivo:
+Mostrar que hay estructura y flexibilidad.
+
+Animaciones:
+- Video de app dentro de card/mockup con floating animation muy sutil.
+- Bullets entran con reveal on scroll.
+- Puede haber una mini línea de horarios animada:
+  “Mañana · Tarde · Noche”
+- Si se usa ScrollTrigger, puede pinnear brevemente el video mientras aparecen los beneficios.
+
+Importante:
+No bloquear demasiado el scroll en mobile.
+
+### 5. Historia personal
+
+Objetivo:
+Conectar emocionalmente.
+
+Animaciones:
+- Foto de Gabriel con parallax suave.
+- Texto entra en 2 o 3 bloques, no todo junto.
+- Añadir pequeña etiqueta flotante: “+2 años y medio en Revolution” o “De Buenos Aires a Cancún”.
+
+No hacer:
+- animaciones exageradas
+- parecer influencer de lujo falso
+
+### 6. Becas
+
+Objetivo:
+Orientar a la beca de 1.000 USD sin ocultar las otras.
+
+Animaciones:
+- Las 3 cards aparecen con stagger.
+- Card avanzada aparece con más presencia.
+- Badge “Recomendada” con reveal suave.
+- Hover premium en cards: elevación ligera, borde más visible, brillo muy sutil.
+- CTA de la beca avanzada debe ser visualmente más fuerte.
+
+Opcional GSAP:
+- A medida que la sección entra, las cards se desplazan sutilmente desde abajo.
+- No usar rotaciones fuertes ni efectos 3D pesados.
+
+### 7. FAQs
+
+Animaciones:
+- Acordeón con height animation suave.
+- Ícono +/− o chevron con rotación.
+- Al abrir una FAQ, mantener el comportamiento rápido y claro.
+
+### 8. Cierre
+
+Objetivo:
+Urgencia clara.
+
+Animaciones:
+- Fondo con radial gradient suave.
+- Número “10” puede tener leve énfasis visual.
+- CTA final visible y fuerte.
+- Microcopy aparece debajo como reaseguro.
+
+No hacer:
+- countdown falso
+- urgencia demasiado agresiva
+- animaciones de escasez tipo casino
+
+## Sticky CTA
+
+Desktop:
+Opcional header sticky con botón “Reservar mi beca”.
+
+Mobile:
+Recomendado:
+- Sticky CTA inferior después de pasar el hero.
+- Texto del botón: “Reservar mi beca”.
+- Microcopy no hace falta en sticky.
+- No tapar contenido importante.
+- Debe tener safe-area para iPhone.
+
+## Reglas de performance
+
+- Respetar prefers-reduced-motion.
+- Evitar animar width, height, top, left cuando se pueda usar transform y opacity.
+- Usar will-change con moderación.
+- ScrollTrigger.refresh() después de cargar imágenes/videos si es necesario.
+- Evitar pinning pesado en mobile.
+- Optimizar video.
+- Mantener FPS fluido.
+
+## Uso de GSAP específico
+
+Usar GSAP para:
+- timelines coordinados
+- ScrollTrigger con scrub sutil
+- pinning breve de app section
+- parallax de fotos
+- refresh/cleanup correcto en React
+
+No usar GSAP para:
+- simples hovers
+- acordeones básicos
+- todo el proyecto sin necesidad
+- animaciones que Framer Motion resuelve mejor
+
+## Frase guía para Claude
+
+“La animación debe sentirse como una landing premium de producto y marca personal, no como una demo de efectos. Cada transición debe ayudar a leer mejor y hacer clic en el CTA.”

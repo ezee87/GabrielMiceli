@@ -1,0 +1,161 @@
+# Dirección visual — Gabriel Miceli x Revolution
+
+## Estilo general
+
+Premium tropical trading.
+
+La landing debe sentirse:
+- moderna
+- desarrollada
+- aspiracional
+- confiable
+- cercana
+- orientada a conversión
+- más personal que una academia
+- más seria que una página tipo Beacons
+
+No debe sentirse:
+- crypto bro
+- neon trading
+- humo financiero
+- promesa de riqueza rápida
+- plantilla genérica de IA
+- landing vacía o básica
+
+## Referencia conceptual
+
+Cancún + trading serio + app educativa + comunidad + acompañamiento personal.
+
+La estética debe mezclar:
+- luz y agua de Cancún
+- claridad y seguridad
+- tecnología/app
+- educación financiera
+- lifestyle realista
+- CTA fuerte
+
+## Paleta de color
+
+Base:
+- Warm White: #F8F6F1
+- Sand: #E8DDC8
+- Soft Gray: #F1F3F2
+
+Texto:
+- Charcoal: #111111
+- Deep Slate: #1D2528
+- Muted Text: #5D6668
+
+Acentos:
+- Ocean Blue: #0B3D4A
+- Turquoise: #18B7B5
+- Deep Teal: #06383F
+- Soft Gold: #C8A84E
+
+Uso:
+- Fondo principal claro cálido.
+- Secciones alternadas con arena o azul profundo.
+- Botones principales en azul profundo o negro carbón.
+- Detalles de beca recomendada con turquesa y dorado suave.
+- No usar gradientes violetas/azules genéricos.
+- No usar neón.
+
+## Tipografía
+
+Usar tipografía distintiva, no una combinación demasiado genérica.
+
+Opciones recomendadas:
+1. Display: Space Grotesk / Body: Manrope
+2. Display: Sora / Body: DM Sans
+3. Display: Plus Jakarta Sans / Body: Source Sans 3
+4. Display: Cabinet Grotesk si está disponible / Body: Inter o Manrope
+
+Preferencia:
+- Titulares con peso fuerte: 800-900.
+- Cuerpo con peso 300-400.
+- Microcopy con peso 400-500.
+- Usar contrastes de peso.
+- Tracking ajustado en titulares.
+- No usar estética demasiado corporativa.
+
+## Layout
+
+Hero:
+- full viewport o casi full viewport.
+- foto grande de Gabriel.
+- copy directo, con CTA visible arriba del fold.
+- badges de confianza debajo.
+
+Secciones:
+- mucho aire
+- cards redondeadas
+- fondos con textura sutil
+- overlays suaves
+- sombras elegantes
+- líneas finas o bordes con baja opacidad
+- transiciones fluidas entre bloques
+
+Cards:
+- border-radius grande
+- sombras suaves
+- borde fino en turquesa/dorado para elementos destacados
+- hover con elevación sutil
+
+Plan de 1.000 USD:
+- card destacada
+- badge “Recomendada”
+- borde turquesa/dorado
+- CTA más fuerte
+- mayor jerarquía visual
+
+## Botones
+
+Primario:
+- Fondo: Ocean Blue o Charcoal
+- Texto: blanco cálido
+- Hover: leve elevación + brillo suave + cambio a Deep Teal
+
+Secundario:
+- Fondo transparente
+- Borde Ocean Blue
+- Texto Ocean Blue
+- Hover con relleno suave
+
+No usar:
+- botones con texto “WhatsApp”
+- botones verdes estilo WhatsApp
+- botones neón
+- gradientes exagerados
+
+## Microcopy
+
+Ubicación:
+Debajo de cada CTA.
+
+Estilo:
+Chico, claro, tranquilizador.
+
+Ejemplos:
+- Te respondo por WhatsApp y vemos qué acceso tiene más sentido para vos.
+- Primero te explico todo. Después decidís.
+- Sin compromiso. La idea es que entiendas bien cómo funciona.
+
+## Fondos
+
+Usar:
+- fondos claros con textura muy sutil
+- radial gradients suaves en turquesa/arena
+- grain/noise muy leve
+- secciones azul profundo para contraste
+- overlays inspirados en agua/luz
+
+Evitar:
+- fondos planos sin vida
+- gradientes morado/azul típicos de IA
+- negro neon crypto
+- grids excesivamente tecnológicos
+
+## Sensación final
+
+La persona debe sentir:
+“Esto parece serio, humano y claro. No me están prometiendo hacerme rico. Me están explicando una forma más segura de entrar, con alguien real que ya está dentro.”

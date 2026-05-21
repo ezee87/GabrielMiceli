@@ -1,0 +1,305 @@
+# Copy completo de landing — Gabriel Miceli x Revolution
+
+## 1. HERO
+
+Eyebrow:
+Gabriel Miceli · Referente de Revolution
+
+Título:
+Aprendé trading desde cero sin pagarle a una academia
+
+Subtítulo:
+Entrá a Revolution con una beca de acceso, depositando desde 300 USD en tu propia cuenta de trading en Exness, y accedé a cursos, clases en vivo, comunidad, evaluaciones y una app completa para estudiar a tu ritmo.
+
+Texto de apoyo:
+Soy Gabriel Miceli. Hace más de 2 años y medio soy parte de Revolution. Empecé sin saber nada, buscando una habilidad que me diera más libertad, y hoy vivo en Cancún desarrollando ese camino.
+
+CTA principal:
+Reservar mi beca
+
+CTA secundario:
+Ver cómo funciona
+
+Microcopy:
+Te respondo por WhatsApp, te explico los planes y vemos cuál tiene más sentido para vos.
+
+Trust bullets debajo del CTA:
+- Desde 300 USD
+- Cuenta propia en Exness
+- App + clases en vivo
+- Sin promesas de resultados
+
+Visual:
+Foto principal de Gabriel en Cancún, idealmente parado en balcón con vista al agua.
+
+Notas de diseño:
+Hero con fondo claro cálido, foto grande, overlay suave azul/turquesa, CTA visible sin scroll en desktop y mobile.
+
+
+## 2. BLOQUE DE CONFIANZA / ANTI-ESTAFA
+
+Eyebrow:
+La duda más común
+
+Título:
+No le das tu dinero a Gabriel ni a Revolution
+
+Copy:
+Sé que mucha gente quiere aprender trading, pero le da miedo perder plata o caer en una estafa. Por eso quiero explicártelo claro desde el principio.
+
+No me pagás a mí.
+No le transferís dinero a Revolution.
+No estás comprando una membresía carísima.
+
+Abrís tu propia cuenta de trading en Exness con tus datos, depositás el capital mínimo de acceso y desde ahí podés estudiar, practicar y operar dentro del ecosistema de Revolution.
+
+Frase destacada:
+Tu dinero queda en tu propia cuenta. No va a una academia.
+
+CTA:
+Quiero entender cómo funciona
+
+Microcopy:
+Te lo explico paso a paso antes de que tomes cualquier decisión.
+
+Cards o bullets:
+- Cuenta creada con tus datos
+- Capital en tu propia cuenta
+- Acceso a formación y comunidad
+- Explicación personalizada antes de avanzar
+
+Nota legal breve:
+El trading implica riesgo. No hay ganancias garantizadas.
+
+
+## 3. APP + FORMACIÓN + FALTA DE TIEMPO
+
+Eyebrow:
+Todo desde una app
+
+Título:
+Estudiá trading a tu ritmo, sin depender de un solo horario
+
+Copy:
+Dentro de Revolution tenés una app donde encontrás cursos básicos, intermedios y avanzados, módulos grabados, evaluaciones, comunidad y recursos para avanzar paso a paso.
+
+Y si querés clases en vivo, todos los días hay 5 sesiones en diferentes momentos: dos a la mañana, dos a la tarde y una a la noche.
+
+Si no podés conectarte en vivo, no pasa nada. Las clases quedan grabadas para que las veas cuando puedas.
+
+Frase destacada:
+Podés empezar aunque trabajes, estudies o tengas poco tiempo.
+
+CTA:
+Ver becas disponibles
+
+Microcopy:
+Te ayudo a elegir el acceso que mejor se adapte a tu situación.
+
+Bullets:
+- Cursos básico, intermedio y avanzado
+- Módulos grabados para ver cuando puedas
+- 5 sesiones en vivo todos los días
+- Clases grabadas
+- Exámenes para medir tus conocimientos
+- Comunidad activa
+- Ideas de trading y análisis
+- App propia de Revolution
+
+Visual:
+Video de la app de Revolution dentro de un mockup o card flotante. También puede acompañarse con foto de laptop/gráficos.
+
+
+## 4. HISTORIA PERSONAL
+
+Eyebrow:
+Mi camino
+
+Título:
+Yo también empecé desde cero
+
+Copy:
+Cuando conocí Revolution no estaba buscando solamente aprender trading. Estaba buscando algo más grande: una habilidad que dependiera de mí, una forma de entender mejor el dinero y una puerta para construir otra vida.
+
+No fue magia. Fue estudiar, equivocarme, practicar, escuchar clases, rodearme de personas que estaban en el mismo camino y seguir.
+
+Hoy vivo en Cancún, México, cumpliendo parte de ese sueño que antes parecía lejano. Y por eso conecto mucho con quienes quieren empezar: porque sé lo que es tener ganas de cambiar, pero también tener dudas, miedo o desconfianza.
+
+Mi trabajo es explicarte todo claro para que sepas si esto es para vos y con qué beca te conviene entrar.
+
+CTA:
+Quiero que me expliques
+
+Microcopy:
+Hablamos por chat, sin compromiso.
+
+Visual:
+Foto de Gabriel sentado con laptop y vista al agua, o foto con lentes para un cierre más personal.
+
+
+## 5. BECAS DISPONIBLES
+
+Eyebrow:
+Accesos disponibles
+
+Título:
+Elegí tu beca de acceso a Revolution
+
+Subtítulo:
+Hay tres accesos disponibles. Si no sabés cuál elegir, me escribís y te recomiendo la opción más conveniente según tu experiencia, capital y objetivo.
+
+Nota antes de cards:
+Todas las becas te permiten ingresar al ecosistema Revolution. La diferencia está en el nivel de formación, comunidad y recursos que desbloqueás.
+
+### Beca Básica — 300 USD
+
+Para empezar desde cero y conocer las bases del trading dentro de Revolution.
+
+Incluye:
+- Clases en vivo todos los días
+- Canal de ideas de trading
+- Chat interactivo general de comunidad
+- Tienda Revolution
+- Curso básico Revolution
+- Evaluación nivel básico
+
+CTA:
+Consultar beca básica
+
+Microcopy:
+Ideal si estás empezando y querés dar el primer paso.
+
+### Beca Intermedia — 600 USD
+
+Para quienes quieren avanzar con más estructura y acceder a una formación más completa.
+
+Incluye todo lo anterior, más:
+- Curso intermedio Revolution
+- Evaluaciones nivel intermedio
+
+CTA:
+Consultar beca intermedia
+
+Microcopy:
+Para avanzar con más herramientas y una curva de aprendizaje más completa.
+
+### Beca Avanzada — 1.000 USD
+
+Badge:
+Recomendada
+
+Título interno:
+La opción recomendada si querés entrar con más compromiso
+
+Copy:
+Para personas que quieren acceder a la experiencia más completa de Revolution, con contenido avanzado, comunidad VIP, ideas VIP y sesiones de mayor nivel.
+
+Incluye todo lo anterior, más:
+- Curso avanzado Revolution
+- Evaluaciones nivel avanzado
+- Comunidad VIP para avanzados y rentables
+- Canal de ideas VIP
+- Sesiones en vivo avanzadas con Cristian Díaz
+
+CTA destacado:
+Quiero la beca avanzada
+
+Microcopy:
+Es la opción que más recomiendo si querés tomarte el proceso en serio desde el inicio.
+
+Notas de diseño:
+La beca de 1.000 USD debe verse destacada, pero no agresiva. Usar borde turquesa/dorado suave, badge “Recomendada”, sombra premium y mayor presencia visual.
+
+
+## 6. FAQs
+
+Título:
+Preguntas frecuentes antes de entrar
+
+FAQ 1:
+¿Esto es un curso pago?
+
+Respuesta:
+No funciona como un curso tradicional. El acceso se habilita depositando capital en tu propia cuenta de trading. Ese dinero no se lo transferís a Gabriel ni a Revolution.
+
+FAQ 2:
+¿La plata queda a mi nombre?
+
+Respuesta:
+Sí. Abrís tu cuenta con tus datos y el capital queda en tu propia cuenta para operar.
+
+FAQ 3:
+¿Necesito experiencia previa?
+
+Respuesta:
+No. Podés empezar desde cero con los módulos básicos, las clases para principiantes y el acompañamiento de la comunidad.
+
+FAQ 4:
+¿Qué pasa si no tengo tiempo para estudiar?
+
+Respuesta:
+Tenés módulos grabados para ver cuando puedas. Además, todos los días hay 5 sesiones en vivo en distintos horarios: dos a la mañana, dos a la tarde y una a la noche. Si no podés estar, las clases quedan grabadas.
+
+FAQ 5:
+¿Cuál beca me conviene?
+
+Respuesta:
+Depende de tu experiencia, capital y objetivo. Si me escribís, te hago unas preguntas simples y te recomiendo la opción más conveniente.
+
+FAQ 6:
+¿Hay resultados garantizados?
+
+Respuesta:
+No. El trading implica riesgo. Revolution te da formación, comunidad y herramientas, pero los resultados dependen de tu práctica, disciplina, gestión del riesgo y decisiones.
+
+FAQ 7:
+¿Tengo que hacer una llamada?
+
+Respuesta:
+No necesariamente. Podemos resolver todo por chat. Si necesitás una llamada para sentirte más seguro, la coordinamos.
+
+CTA debajo de FAQs:
+Resolver mis dudas
+
+Microcopy:
+Te respondo por WhatsApp y te explico todo antes de que decidas.
+
+
+## 7. CIERRE CON URGENCIA
+
+Eyebrow:
+Cupos del mes
+
+Título:
+Solo quedan 10 becas disponibles este mes
+
+Copy:
+Este mes voy a acompañar personalmente a 10 personas para ingresar a Revolution, explicarles cómo funciona, ayudarlas a elegir la beca correcta y guiarlas en sus primeros pasos.
+
+Cuando se completen las becas disponibles de este mes, voy a abrir nuevos lugares el próximo mes.
+
+CTA final:
+Reservar mi beca
+
+Microcopy:
+Primero te explico todo por WhatsApp. Después decidís si querés avanzar.
+
+Disclaimer final:
+El trading implica riesgo y no existen ganancias garantizadas. La formación, la comunidad y las herramientas pueden ayudarte a aprender y operar con más criterio, pero cada decisión es responsabilidad del usuario.
+
+
+## CTAs globales sugeridos
+
+Botones:
+- Reservar mi beca
+- Quiero entrar a Revolution
+- Ver becas disponibles
+- Quiero que me expliques
+- Aplicar a la beca avanzada
+- Resolver mis dudas
+
+Microcopys:
+- Te respondo por WhatsApp y vemos qué acceso tiene más sentido para vos.
+- Primero te explico todo. Después decidís.
+- Sin compromiso. La idea es que entiendas bien cómo funciona.
+- Te ayudo a elegir la beca correcta según tu experiencia y capital.
