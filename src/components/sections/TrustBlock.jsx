@@ -57,7 +57,7 @@ export default function TrustBlock() {
     <section
       ref={sectionRef}
       id="como-funciona"
-      className="bg-ocean grain-overlay py-20 lg:py-28"
+      className="bg-ocean dark:bg-dk-surface grain-overlay py-20 lg:py-28"
     >
       <div className="container mx-auto px-6 lg:px-10 max-w-5xl">
 
@@ -98,7 +98,7 @@ export default function TrustBlock() {
 
         {/* Card destacada */}
         <ScrollReveal delay={0.2}>
-          <div className="bg-white rounded-3xl p-7 lg:p-9 mb-10 border border-turquoise/20 shadow-[0_0_40px_-10px_rgba(24,183,181,0.25)]">
+          <div className="bg-white dark:bg-dk-card rounded-3xl p-7 lg:p-9 mb-10 border border-turquoise/20 dark:border-turquoise/15 shadow-[0_0_40px_-10px_rgba(24,183,181,0.25)] dark:shadow-[0_0_40px_-10px_rgba(24,183,181,0.12)]">
             <div className="flex items-start gap-4 mb-6">
               <div className="flex-shrink-0 w-10 h-10 rounded-2xl bg-turquoise/10 flex items-center justify-center">
                 <span className="text-turquoise text-lg">✓</span>
@@ -107,13 +107,13 @@ export default function TrustBlock() {
                 <p className="text-xs font-semibold tracking-widest uppercase text-turquoise mb-1">
                   Así funciona realmente
                 </p>
-                <p className="text-xl lg:text-2xl font-bold text-charcoal leading-snug">
+                <p className="text-xl lg:text-2xl font-bold text-charcoal dark:text-dk-text leading-snug">
                   Tu dinero queda en tu propia cuenta. No va a una academia.
                 </p>
               </div>
             </div>
 
-            <p className="text-deep-slate text-base leading-relaxed mb-7">
+            <p className="text-deep-slate dark:text-dk-text2 text-base leading-relaxed mb-7">
               Abrís tu propia cuenta de trading en Exness con tus datos, depositás el capital mínimo de acceso
               y desde ahí podés estudiar, practicar y operar dentro del ecosistema de Revolution.
             </p>
@@ -125,8 +125,8 @@ export default function TrustBlock() {
                     <span className="text-turquoise text-[11px] font-bold">✓</span>
                   </span>
                   <div>
-                    <p className="text-sm font-semibold text-charcoal mb-0.5">{point.title}</p>
-                    <p className="text-xs text-muted leading-relaxed">{point.desc}</p>
+                    <p className="text-sm font-semibold text-charcoal dark:text-dk-text mb-0.5">{point.title}</p>
+                    <p className="text-xs text-muted dark:text-dk-muted leading-relaxed">{point.desc}</p>
                   </div>
                 </div>
               ))}

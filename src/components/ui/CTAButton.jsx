@@ -1,4 +1,4 @@
-import { WHATSAPP_URL } from '../../constants'
+import { WHATSAPP_GENERAL_URL } from '../../constants'
 
 /**
  * CTAButton — botón de conversión global.
@@ -25,11 +25,11 @@ export default function CTAButton({
 
   const variants = {
     primary:
-      'bg-ocean text-white hover:bg-deep-teal shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-ocean',
+      'bg-ocean text-white hover:bg-deep-teal shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-ocean dark:bg-turquoise dark:text-dk-bg dark:hover:bg-dk-blue dark:focus-visible:ring-turquoise',
     'primary-light':
-      'bg-white text-ocean hover:bg-warm-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-white',
+      'bg-white text-ocean hover:bg-warm-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-white dark:bg-dk-blue dark:text-dk-bg dark:hover:bg-turquoise',
     secondary:
-      'bg-transparent text-ocean border-2 border-ocean hover:bg-ocean/5 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-ocean',
+      'bg-transparent text-ocean border-2 border-ocean hover:bg-ocean/5 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-ocean dark:text-dk-blue dark:border-dk-blue/60 dark:hover:bg-dk-blue/10 dark:focus-visible:ring-dk-blue',
     'secondary-light':
       'bg-transparent text-white border-2 border-white/60 hover:bg-white/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-white',
   }
@@ -40,7 +40,7 @@ export default function CTAButton({
     large: 'px-9 py-4 text-base',
   }
 
-  const url = href ?? WHATSAPP_URL
+  const url = href ?? WHATSAPP_GENERAL_URL
   const isExternal = url.startsWith('http')
 
   return (

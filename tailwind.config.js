@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -14,6 +15,15 @@ export default {
         'turquoise': '#18B7B5',
         'deep-teal': '#06383F',
         'gold': '#C8A84E',
+        // Dark mode palette
+        'dk-bg': '#061A1D',
+        'dk-surface': '#0B2E34',
+        'dk-card': '#102F35',
+        'dk-featured': '#123F46',
+        'dk-text': '#F8F6F1',
+        'dk-text2': '#C9D3D2',
+        'dk-muted': '#91A3A4',
+        'dk-blue': '#4DDCD8',
       },
       fontFamily: {
         display: ['"Plus Jakarta Sans"', 'sans-serif'],

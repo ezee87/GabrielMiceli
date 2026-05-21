@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import CTAButton from '../ui/CTAButton'
+import DarkModeToggle from '../ui/DarkModeToggle'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -14,7 +15,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-warm-white/95 backdrop-blur-md shadow-sm border-b border-charcoal/5'
+          ? 'bg-warm-white/95 dark:bg-dk-bg/95 backdrop-blur-md shadow-sm border-b border-charcoal/5 dark:border-white/10'
           : 'bg-transparent'
       }`}
     >
@@ -22,7 +23,7 @@ export default function Navbar() {
         {/* Logo / Marca */}
         <a href="#hero" className="flex flex-col leading-none group">
           <span
-            className={`font-display font-bold text-[15px] tracking-tight transition-colors ${
+            className={`font-display font-bold text-[15px] tracking-tight transition-colors dark:text-dk-text ${
               scrolled ? 'text-charcoal' : 'text-white lg:text-charcoal'
             }`}
           >
@@ -38,9 +39,12 @@ export default function Navbar() {
         </a>
 
         {/* CTA derecha */}
-        <CTAButton size="sm" className="shadow-none">
-          Reservar mi beca
-        </CTAButton>
+        <div className="flex items-center gap-3">
+          <DarkModeToggle />
+          <CTAButton size="sm" className="shadow-none">
+            Reservar mi beca
+          </CTAButton>
+        </div>
       </div>
     </header>
   )

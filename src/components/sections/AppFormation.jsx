@@ -20,17 +20,17 @@ const schedule = ['09:00', '11:00', '20:00', '21:00', '22:00']
 
 export default function AppFormation() {
   return (
-    <section className="bg-sand py-20 lg:py-28">
+    <section className="bg-sand dark:bg-dk-surface py-20 lg:py-28">
       <div className="container mx-auto px-6 lg:px-10 max-w-6xl">
 
         {/* Header */}
         <ScrollReveal>
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <SectionEyebrow>Todo desde una app</SectionEyebrow>
-            <h2 className="font-display font-extrabold text-charcoal text-balance leading-tight tracking-tight text-3xl sm:text-4xl lg:text-5xl mb-5">
+            <h2 className="font-display font-extrabold text-charcoal dark:text-dk-text text-balance leading-tight tracking-tight text-3xl sm:text-4xl lg:text-5xl mb-5">
               Estudiá trading a tu ritmo, sin depender de un solo horario
             </h2>
-            <p className="text-muted text-base lg:text-lg leading-relaxed">
+            <p className="text-muted dark:text-dk-text2 text-base lg:text-lg leading-relaxed">
               Dentro de Revolution tenés una app donde encontrás cursos, módulos grabados,
               evaluaciones, comunidad y recursos para avanzar paso a paso.
             </p>
@@ -46,10 +46,10 @@ export default function AppFormation() {
                 {features.map((label) => (
                   <div
                     key={label}
-                    className="flex items-center gap-3 bg-white/70 rounded-2xl px-4 py-3.5 border border-charcoal/8 shadow-sm"
+                    className="flex items-center gap-3 bg-white/70 dark:bg-dk-card rounded-2xl px-4 py-3.5 border border-charcoal/8 dark:border-white/10 shadow-sm"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-turquoise flex-shrink-0" />
-                    <span className="text-sm font-medium text-deep-slate leading-tight">{label}</span>
+                    <span className="text-sm font-medium text-deep-slate dark:text-dk-text2 leading-tight">{label}</span>
                   </div>
                 ))}
               </div>
@@ -57,7 +57,7 @@ export default function AppFormation() {
 
             {/* Schedule pills */}
             <ScrollReveal delay={0.1}>
-              <div className="bg-white rounded-3xl p-6 border border-charcoal/8 shadow-sm mb-8">
+              <div className="bg-white dark:bg-dk-card rounded-3xl p-6 border border-charcoal/8 dark:border-white/10 shadow-sm mb-8">
                 <p className="text-xs font-semibold tracking-widest uppercase text-turquoise mb-4">
                   Sesiones en vivo diarias
                 </p>
@@ -65,29 +65,29 @@ export default function AppFormation() {
                   {schedule.map((time) => (
                     <div
                       key={time}
-                      className="flex items-center gap-2 px-4 py-2 bg-ocean/6 border border-ocean/15 rounded-full"
+                      className="flex items-center gap-2 px-4 py-2 bg-ocean/6 dark:bg-turquoise/10 border border-ocean/15 dark:border-turquoise/20 rounded-full"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-turquoise flex-shrink-0" />
-                      <span className="text-sm font-semibold text-ocean">{time}</span>
+                      <span className="text-sm font-semibold text-ocean dark:text-turquoise">{time}</span>
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-muted mt-4 leading-relaxed">
+                <p className="text-xs text-muted dark:text-dk-muted mt-4 leading-relaxed">
                   Si no podés conectarte en vivo, no pasa nada.{' '}
-                  <strong className="text-charcoal font-semibold">Las clases quedan grabadas</strong>{' '}
+                  <strong className="text-charcoal dark:text-dk-text font-semibold">Las clases quedan grabadas</strong>{' '}
                   para que las veas cuando puedas.
                 </p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.15}>
-              <p className="text-base font-semibold text-charcoal mb-5">
+              <p className="text-base font-semibold text-charcoal dark:text-dk-text mb-5">
                 Podés empezar aunque trabajes, estudies o tengas poco tiempo.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <CTAButton size="large">Ver becas disponibles</CTAButton>
               </div>
-              <p className="text-sm text-muted mt-3">
+              <p className="text-sm text-muted dark:text-dk-muted mt-3">
                 Te ayudo a elegir el acceso que mejor se adapte a tu situación.
               </p>
             </ScrollReveal>
@@ -141,7 +141,7 @@ export default function AppFormation() {
 
                 {/* Mini badge debajo del phone */}
                 <div className="mt-4 flex justify-center">
-                  <span className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow border border-charcoal/8 text-xs font-semibold text-charcoal">
+                  <span className="inline-flex items-center gap-2 bg-white dark:bg-dk-card px-4 py-2 rounded-full shadow border border-charcoal/8 dark:border-white/10 text-xs font-semibold text-charcoal dark:text-dk-text">
                     <span className="w-2 h-2 rounded-full bg-turquoise animate-pulse" />
                     Comunidad activa ahora
                   </span>

@@ -85,7 +85,7 @@ export default function Hero() {
     <section
       ref={heroRef}
       id="hero"
-      className="relative bg-warm-white overflow-hidden"
+      className="relative bg-warm-white dark:bg-dk-bg overflow-hidden"
     >
       <div className="relative flex flex-col lg:flex-row lg:min-h-screen">
 
@@ -100,7 +100,7 @@ export default function Hero() {
             // Imagen requerida: /public/images/gabriel-hero-balcon-cancun.jpeg
           />
           {/* Gradiente inferior para transición suave al contenido */}
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-warm-white to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-warm-white dark:from-dk-bg to-transparent" />
         </div>
 
         {/* ── Columna de texto ── */}
@@ -115,13 +115,13 @@ export default function Hero() {
               Gabriel Miceli · Referente de Revolution
             </SectionEyebrow>
 
-            <h1 className="hero-title font-display font-extrabold text-charcoal text-balance leading-[1.04] tracking-[-0.02em] text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] mb-5">
+            <h1 className="hero-title font-display font-extrabold text-charcoal dark:text-dk-text text-balance leading-[1.04] tracking-[-0.02em] text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] mb-5">
               Aprendé trading desde cero sin pagarle a una academia
             </h1>
 
-            <p className="hero-subtitle text-deep-slate text-base lg:text-[17px] leading-relaxed mb-7 max-w-[480px]">
+            <p className="hero-subtitle text-deep-slate dark:text-dk-text2 text-base lg:text-[17px] leading-relaxed mb-7 max-w-[480px]">
               Entrá a Revolution con una beca de acceso depositando desde{' '}
-              <strong className="font-semibold text-charcoal">300 USD en tu propia cuenta de trading</strong>{' '}
+              <strong className="font-semibold text-charcoal dark:text-dk-text">300 USD en tu propia cuenta de trading</strong>{' '}
               en Exness, y accedé a cursos, clases en vivo, comunidad, evaluaciones y una app completa.
             </p>
 
@@ -132,13 +132,13 @@ export default function Hero() {
               </CTAButton>
               <a
                 href="#como-funciona"
-                className="inline-flex items-center justify-center w-full sm:w-auto gap-2 px-7 py-4 text-sm font-semibold text-ocean border-2 border-ocean/30 rounded-full hover:border-ocean/60 hover:bg-ocean/5 transition-all duration-200"
+                className="inline-flex items-center justify-center w-full sm:w-auto gap-2 px-7 py-4 text-sm font-semibold text-ocean dark:text-dk-blue border-2 border-ocean/30 dark:border-dk-blue/30 rounded-full hover:border-ocean/60 dark:hover:border-dk-blue/60 hover:bg-ocean/5 dark:hover:bg-dk-blue/10 transition-all duration-200"
               >
                 Ver cómo funciona
               </a>
             </div>
 
-            <p className="hero-microcopy text-sm text-muted mb-8">
+            <p className="hero-microcopy text-sm text-muted dark:text-dk-muted mb-8">
               Te respondo por WhatsApp, te explico los planes y vemos cuál tiene más sentido para vos.
             </p>
 
@@ -147,7 +147,7 @@ export default function Hero() {
               {trustBadges.map((badge) => (
                 <span
                   key={badge.label}
-                  className="hero-badge inline-flex items-center gap-1.5 px-3.5 py-2 bg-white border border-charcoal/10 rounded-full text-[12px] font-medium text-charcoal shadow-sm"
+                  className="hero-badge inline-flex items-center gap-1.5 px-3.5 py-2 bg-white dark:bg-dk-card border border-charcoal/10 dark:border-white/10 rounded-full text-[12px] font-medium text-charcoal dark:text-dk-text shadow-sm"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-turquoise flex-shrink-0" />
                   {badge.label}
@@ -171,21 +171,21 @@ export default function Hero() {
             // Imagen requerida: /public/images/gabriel-hero-balcon-cancun.jpeg
           />
           {/* Gradiente izquierdo para blend con warm-white */}
-          <div className="absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-warm-white/60 to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-warm-white/60 dark:from-dk-bg/80 to-transparent" />
           {/* Gradiente inferior */}
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ocean/25 to-transparent" />
 
           {/* Badge flotante sobre la foto */}
-          <div className="hero-photo-badge absolute bottom-10 left-8 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-3.5 shadow-xl border border-white/60">
-            <p className="text-[11px] text-muted font-medium mb-0.5">Cancún, México</p>
-            <p className="text-sm font-bold text-charcoal">+2 años en Revolution</p>
+          <div className="hero-photo-badge absolute bottom-10 left-8 bg-white/90 dark:bg-dk-card/90 backdrop-blur-sm rounded-2xl px-4 py-3.5 shadow-xl border border-white/60 dark:border-white/20">
+            <p className="text-[11px] text-muted dark:text-dk-muted font-medium mb-0.5">Cancún, México</p>
+            <p className="text-sm font-bold text-charcoal dark:text-dk-text">+2 años en Revolution</p>
           </div>
         </div>
 
       </div>
 
       {/* Separador visual sutil */}
-      <div className="h-px bg-gradient-to-r from-transparent via-charcoal/10 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-charcoal/10 dark:via-white/10 to-transparent" />
     </section>
   )
 }

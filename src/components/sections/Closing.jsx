@@ -37,7 +37,7 @@ export default function Closing() {
   )
 
   return (
-    <section ref={closingRef} className="relative bg-ocean grain-overlay overflow-hidden py-20 lg:py-28">
+    <section ref={closingRef} className="relative bg-ocean dark:bg-dk-bg grain-overlay overflow-hidden py-20 lg:py-28">
 
       {/* Radial glow de fondo — puramente decorativo, sin imagen */}
       <div

@@ -29,7 +29,7 @@ export default function StickyCTA() {
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
           <div
-            className="bg-warm-white/95 backdrop-blur-md border-t border-charcoal/10 px-4 pt-3"
+            className="bg-warm-white/95 dark:bg-dk-bg/95 backdrop-blur-md border-t border-charcoal/10 dark:border-white/10 px-4 pt-3"
             style={{ paddingBottom: 'max(12px, env(safe-area-inset-bottom, 12px))' }}
           >
             <CTAButton size="default" className="w-full justify-center text-center">

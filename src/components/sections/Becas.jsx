@@ -5,10 +5,16 @@ import gsap from 'gsap'
 import SectionEyebrow from '../ui/SectionEyebrow'
 import CTAButton from '../ui/CTAButton'
 import ScrollReveal from '../ui/ScrollReveal'
+import {
+  WHATSAPP_BASIC_URL,
+  WHATSAPP_INTERMEDIATE_URL,
+  WHATSAPP_ADVANCED_URL,
+} from '../../constants'
 
 const becas = [
   {
     id: 'basica',
+    href: WHATSAPP_BASIC_URL,
     name: 'Beca Básica',
     price: '300',
     tagline: 'Para empezar desde cero y conocer las bases del trading dentro de Revolution.',
@@ -26,6 +32,7 @@ const becas = [
   },
   {
     id: 'intermedia',
+    href: WHATSAPP_INTERMEDIATE_URL,
     name: 'Beca Intermedia',
     price: '600',
     tagline: 'Para quienes quieren avanzar con más estructura y acceder a una formación más completa.',
@@ -40,6 +47,7 @@ const becas = [
   },
   {
     id: 'avanzada',
+    href: WHATSAPP_ADVANCED_URL,
     name: 'Beca Avanzada',
     price: '1.000',
     tagline: 'La opción recomendada si querés acceder a la experiencia más completa de Revolution.',
@@ -88,17 +96,17 @@ export default function Becas() {
   )
 
   return (
-    <section id="becas" className="bg-warm-white py-20 lg:py-28">
+    <section id="becas" className="bg-warm-white dark:bg-dk-bg py-20 lg:py-28">
       <div className="container mx-auto px-6 lg:px-10 max-w-6xl" ref={becasRef}>
 
         {/* Header */}
         <ScrollReveal>
           <div className="text-center mb-4">
             <SectionEyebrow>Accesos disponibles</SectionEyebrow>
-            <h2 className="font-display font-extrabold text-charcoal text-balance leading-tight tracking-tight text-3xl sm:text-4xl lg:text-5xl mb-4">
+            <h2 className="font-display font-extrabold text-charcoal dark:text-dk-text text-balance leading-tight tracking-tight text-3xl sm:text-4xl lg:text-5xl mb-4">
               Elegí tu beca de acceso a Revolution
             </h2>
-            <p className="text-muted text-base lg:text-lg leading-relaxed max-w-xl mx-auto">
+            <p className="text-muted dark:text-dk-text2 text-base lg:text-lg leading-relaxed max-w-xl mx-auto">
               Hay tres accesos disponibles. Si no sabés cuál elegir, me escribís y te recomiendo
               la opción más conveniente según tu experiencia, capital y objetivo.
             </p>
@@ -106,7 +114,7 @@ export default function Becas() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.05}>
-          <p className="text-center text-sm text-muted/80 mb-10 lg:mb-14 max-w-lg mx-auto border border-charcoal/8 rounded-2xl px-5 py-3 bg-white/60">
+          <p className="text-center text-sm text-muted/80 dark:text-dk-muted mb-10 lg:mb-14 max-w-lg mx-auto border border-charcoal/8 dark:border-white/10 rounded-2xl px-5 py-3 bg-white/60 dark:bg-dk-card/60">
             Todas las becas te permiten ingresar al ecosistema Revolution. La diferencia está
             en el nivel de formación, comunidad y recursos que desbloqueás.
           </p>
@@ -120,7 +128,7 @@ export default function Becas() {
         </div>
 
         <ScrollReveal delay={0.2}>
-          <p className="text-center text-sm text-muted mt-10">
+          <p className="text-center text-sm text-muted dark:text-dk-muted mt-10">
             ¿No sabés cuál elegir?{' '}
             <a
               href="#faqs"
@@ -138,7 +146,7 @@ export default function Becas() {
 }
 
 function BecaCard({ beca }) {
-  const { name, price, tagline, features, cta, microcopy, featured, badge } = beca
+  const { name, price, tagline, features, cta, microcopy, featured, badge, href } = beca
 
   return (
     <div
@@ -156,15 +164,15 @@ function BecaCard({ beca }) {
       <div
         className={`h-full rounded-4xl flex flex-col p-7 lg:p-8 border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-default ${
           featured
-            ? 'bg-white border-turquoise/50 shadow-[0_12px_70px_-10px_rgba(24,183,181,0.35)] pt-12'
-            : 'bg-white/80 border-charcoal/10 shadow-sm'
+            ? 'bg-white dark:bg-dk-featured border-turquoise/50 dark:border-turquoise/40 shadow-[0_12px_70px_-10px_rgba(24,183,181,0.35)] dark:shadow-[0_12px_60px_-10px_rgba(24,183,181,0.2),0_0_30px_-8px_rgba(200,168,78,0.12)] pt-12'
+            : 'bg-white/80 dark:bg-dk-card border-charcoal/10 dark:border-white/10 shadow-sm'
         }`}
       >
         {/* Nombre y precio */}
         <div className="mb-5">
           <p
             className={`text-[11px] font-semibold tracking-widest uppercase mb-2 ${
-              featured ? 'text-turquoise' : 'text-muted'
+              featured ? 'text-turquoise' : 'text-muted dark:text-dk-muted'
             }`}
           >
             {name}
@@ -172,19 +180,19 @@ function BecaCard({ beca }) {
           <div className="flex items-baseline gap-1 mb-3">
             <span
               className={`font-display font-extrabold text-4xl lg:text-5xl tracking-tight ${
-                featured ? 'text-ocean' : 'text-charcoal'
+                featured ? 'text-ocean dark:text-turquoise' : 'text-charcoal dark:text-dk-text'
               }`}
             >
               {price}
             </span>
-            <span className="text-muted font-medium text-sm">USD</span>
+            <span className="text-muted dark:text-dk-muted font-medium text-sm">USD</span>
           </div>
-          <p className="text-sm text-muted leading-relaxed">{tagline}</p>
+          <p className="text-sm text-muted dark:text-dk-muted leading-relaxed">{tagline}</p>
         </div>
 
         {/* Separador */}
         <div
-          className={`h-px mb-5 ${featured ? 'bg-turquoise/20' : 'bg-charcoal/8'}`}
+          className={`h-px mb-5 ${featured ? 'bg-turquoise/20' : 'bg-charcoal/8 dark:bg-white/10'}`}
         />
 
         {/* Features */}
@@ -195,12 +203,12 @@ function BecaCard({ beca }) {
                 className={`flex-shrink-0 mt-0.5 w-4 h-4 rounded-full flex items-center justify-center text-[10px] font-bold ${
                   featured
                     ? 'bg-turquoise/15 text-turquoise'
-                    : 'bg-charcoal/8 text-charcoal'
+                    : 'bg-charcoal/8 dark:bg-white/10 text-charcoal dark:text-dk-text2'
                 }`}
               >
                 ✓
               </span>
-              <span className="text-deep-slate leading-snug">{f}</span>
+              <span className="text-deep-slate dark:text-dk-text2 leading-snug">{f}</span>
             </li>
           ))}
         </ul>
@@ -208,13 +216,14 @@ function BecaCard({ beca }) {
         {/* CTA */}
         <div className="flex flex-col gap-2">
           <CTAButton
+            href={href}
             variant={featured ? 'primary' : 'secondary'}
             size={featured ? 'large' : 'default'}
             className={featured ? 'w-full justify-center text-center' : 'w-full justify-center text-center'}
           >
             {cta}
           </CTAButton>
-          <p className="text-xs text-muted text-center leading-relaxed">{microcopy}</p>
+          <p className="text-xs text-muted dark:text-dk-muted text-center leading-relaxed">{microcopy}</p>
         </div>
       </div>
     </div>

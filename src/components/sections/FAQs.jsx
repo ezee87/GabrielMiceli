@@ -37,13 +37,13 @@ const faqs = [
 
 export default function FAQs() {
   return (
-    <section id="faqs" className="bg-sand py-20 lg:py-28">
+    <section id="faqs" className="bg-sand dark:bg-dk-surface py-20 lg:py-28">
       <div className="container mx-auto px-6 lg:px-10 max-w-3xl">
 
         <ScrollReveal>
           <div className="text-center mb-12">
             <SectionEyebrow>¿Tenés dudas?</SectionEyebrow>
-            <h2 className="font-display font-extrabold text-charcoal text-balance leading-tight tracking-tight text-3xl sm:text-4xl lg:text-5xl">
+            <h2 className="font-display font-extrabold text-charcoal dark:text-dk-text text-balance leading-tight tracking-tight text-3xl sm:text-4xl lg:text-5xl">
               Preguntas frecuentes antes de entrar
             </h2>
           </div>
@@ -51,7 +51,7 @@ export default function FAQs() {
 
         {/* Accordion */}
         <ScrollReveal delay={0.1}>
-          <div className="bg-white rounded-4xl overflow-hidden border border-charcoal/8 shadow-sm divide-y divide-charcoal/8 mb-10">
+          <div className="bg-white dark:bg-dk-card rounded-4xl overflow-hidden border border-charcoal/8 dark:border-white/10 shadow-sm divide-y divide-charcoal/8 dark:divide-white/10 mb-10">
             {faqs.map((faq, i) => (
               <FAQItem key={i} question={faq.q} answer={faq.a} />
             ))}
@@ -61,7 +61,7 @@ export default function FAQs() {
         <ScrollReveal delay={0.15}>
           <div className="flex flex-col items-center gap-3">
             <CTAButton size="large">Resolver mis dudas</CTAButton>
-            <p className="text-sm text-muted text-center">
+            <p className="text-sm text-muted dark:text-dk-muted text-center">
               Te respondo por WhatsApp y te explico todo antes de que decidas.
             </p>
           </div>
@@ -80,10 +80,10 @@ function FAQItem({ question, answer }) {
     <div>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between gap-4 px-7 py-5 lg:py-6 text-left hover:bg-charcoal/3 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquoise focus-visible:ring-inset"
+        className="w-full flex items-center justify-between gap-4 px-7 py-5 lg:py-6 text-left hover:bg-charcoal/3 dark:hover:bg-white/5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquoise focus-visible:ring-inset"
         aria-expanded={isOpen}
       >
-        <span className="font-semibold text-charcoal text-sm lg:text-base leading-snug">
+          <span className="font-semibold text-charcoal dark:text-dk-text text-sm lg:text-base leading-snug">
           {question}
         </span>
         <motion.span
@@ -106,7 +106,7 @@ function FAQItem({ question, answer }) {
             transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
             className="overflow-hidden"
           >
-            <p className="px-7 pb-5 text-muted text-sm lg:text-base leading-relaxed">
+            <p className="px-7 pb-5 text-muted dark:text-dk-muted text-sm lg:text-base leading-relaxed">
               {answer}
             </p>
           </motion.div>

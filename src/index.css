@@ -16,6 +16,7 @@
 
   body {
     @apply font-body text-charcoal antialiased bg-warm-white;
+    @apply dark:bg-dk-bg dark:text-dk-text;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

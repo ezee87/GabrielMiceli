@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" shape-rendering="geometricPrecision">
+  <!-- Fondo redondeado ocean -->
+  <rect width="64" height="64" rx="14" fill="#0B3D4A"/>
+  <!-- Letra G como path vectorial — legible hasta 16x16 -->
+  <path
+    d="M43 24.5C40.4 21.4 36.6 19.5 32 19.5C24 19.5 18 25.7 18 32S24 44.5 32 44.5C38.5 44.5 44 40.3 45.5 34.5H32V29H51V34.5C49.5 43 41.5 50 32 50C21.2 50 12.5 42 12.5 32S21.2 14 32 14C38.5 14 44.2 17.1 47.8 22L43 24.5Z"
+    fill="#F8F6F1"
+  />
+  <!-- Acento turquesa — punto en la G -->
+  <circle cx="44" cy="32" r="3.5" fill="#18B7B5"/>
+</svg>

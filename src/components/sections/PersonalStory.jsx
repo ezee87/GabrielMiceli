@@ -38,7 +38,7 @@ export default function PersonalStory() {
   return (
     <section
       ref={sectionRef}
-      className="bg-ocean grain-overlay py-20 lg:py-28 overflow-hidden"
+      className="bg-ocean dark:bg-dk-surface grain-overlay py-20 lg:py-28 overflow-hidden"
     >
       <div className="container mx-auto px-6 lg:px-10 max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -76,7 +76,7 @@ export default function PersonalStory() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.25}>
-              <div className="bg-white/8 border border-white/15 rounded-2xl px-6 py-5 mb-8">
+              <div className="bg-white/8 dark:bg-white/5 border border-white/15 dark:border-white/10 rounded-2xl px-6 py-5 mb-8">
                 <p className="text-white font-semibold text-base lg:text-lg leading-snug italic">
                   "Mi trabajo es explicarte todo claro para que sepas si esto es para vos
                   y con qué beca te conviene entrar."
@@ -117,9 +117,9 @@ export default function PersonalStory() {
               </div>
 
               {/* Badge flotante: De Buenos Aires a Cancún */}
-              <div className="absolute -bottom-5 -left-5 lg:-left-8 bg-white rounded-2xl px-4 py-3.5 shadow-xl border border-charcoal/8">
-                <p className="text-[11px] text-muted font-medium mb-0.5">De Buenos Aires</p>
-                <p className="text-sm font-bold text-charcoal">a Cancún, México 🌊</p>
+              <div className="absolute -bottom-5 -left-5 lg:-left-8 bg-white dark:bg-dk-card rounded-2xl px-4 py-3.5 shadow-xl border border-charcoal/8 dark:border-white/10">
+                <p className="text-[11px] text-muted dark:text-dk-muted font-medium mb-0.5">De Buenos Aires</p>
+                <p className="text-sm font-bold text-charcoal dark:text-dk-text">a Cancún, México 🌊</p>
               </div>
 
               {/* Badge flotante: tiempo en Revolution */}
