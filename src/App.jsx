@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Navbar from './components/layout/Navbar'
 import StickyCTA from './components/layout/StickyCTA'
 import Hero from './components/sections/Hero'
@@ -24,6 +25,7 @@ export default function App() {
       </main>
       <StickyCTA />
       <Analytics />
+      <SpeedInsights />
     </>
   )
 }
