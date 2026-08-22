@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import Navbar from './components/layout/Navbar'
 import StickyCTA from './components/layout/StickyCTA'
 import Hero from './components/sections/Hero'
@@ -22,6 +23,7 @@ export default function App() {
         <Closing />
       </main>
       <StickyCTA />
+      <Analytics />
     </>
   )
 }
