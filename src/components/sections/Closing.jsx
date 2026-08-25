@@ -3,13 +3,14 @@ import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
 import SectionEyebrow from '../ui/SectionEyebrow'
-import CTAButton from '../ui/CTAButton'
 import ScrollReveal from '../ui/ScrollReveal'
+import { getAvailableScholarships } from '../../utils/scholarships'
 
 // Imagen requerida: /public/images/gabriel-lentes-cancun.jpg
 
 export default function Closing() {
   const closingRef = useRef(null)
+  const availableScholarships = getAvailableScholarships()
 
   useGSAP(
     () => {
@@ -19,7 +20,7 @@ export default function Closing() {
         if (!counterEl) return
         const obj = { val: 0 }
         gsap.to(obj, {
-          val: 10,
+          val: availableScholarships,
           duration: 1.6,
           ease: 'power2.out',
           scrollTrigger: {
@@ -37,7 +38,7 @@ export default function Closing() {
   )
 
   return (
-    <section ref={closingRef} className="relative bg-ocean dark:bg-dk-bg grain-overlay overflow-hidden py-20 lg:py-28">
+    <section ref={closingRef} className="relative bg-ocean dark:bg-dk-surface grain-overlay overflow-hidden pb-14 pt-0 lg:pb-16 lg:pt-0">
 
       {/* Radial glow de fondo — puramente decorativo, sin imagen */}
       <div
@@ -61,9 +62,9 @@ export default function Closing() {
               <div className="flex items-baseline gap-4 mb-5">
                 <span
                   className="closing-counter font-display font-extrabold leading-none tracking-tight text-white"
-                  style={{ fontSize: 'clamp(5rem, 14vw, 9rem)' }}
+                  style={{ fontSize: 'clamp(4.5rem, 11vw, 7.5rem)' }}
                 >
-                  0
+                  {availableScholarships}
                 </span>
                 <div>
                   <p className="text-white/70 text-base leading-snug">
@@ -76,35 +77,23 @@ export default function Closing() {
               </div>
 
               <h2 className="font-display font-extrabold text-white text-balance leading-tight tracking-tight text-3xl sm:text-4xl lg:text-[2.6rem] mb-6">
-                Solo quedan 10 becas disponibles este mes
+                Este mes acompaño personalmente a un grupo reducido
               </h2>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
               <p className="text-white/75 text-base lg:text-lg leading-relaxed mb-5">
-                Este mes voy a acompañar personalmente a 10 personas para ingresar a Revolution,
-                explicarles cómo funciona, ayudarlas a elegir la beca correcta y guiarlas en sus primeros pasos.
+                La idea no es que entres sin entender. Primero te explico cómo funciona Revolution, qué incluye cada acceso y cuál puede tener más sentido para tu situación.
               </p>
-              <p className="text-white/60 text-base leading-relaxed mb-9">
-                Cuando se completen los cupos de este mes, voy a abrir nuevos lugares el próximo mes.
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.15}>
-              <div className="flex flex-col sm:flex-row gap-3 mb-4">
-                <CTAButton variant="primary-light" size="large">
-                  Reservar mi beca
-                </CTAButton>
-              </div>
-              <p className="text-white/50 text-sm">
-                Primero te explico todo por WhatsApp. Después decidís si querés avanzar.
+              <p className="text-white/60 text-base leading-relaxed">
+                Cuando tengas claro el sistema, decidís si querés avanzar.
               </p>
             </ScrollReveal>
           </div>
 
           {/* Columna foto */}
           <ScrollReveal delay={0.2} className="flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[380px]">
+            <div className="relative w-full max-w-[340px]">
 
               <div className="relative rounded-4xl overflow-hidden aspect-[4/5] shadow-[0_30px_80px_-15px_rgba(0,0,0,0.55)]">
                 {/* Placeholder visual */}
@@ -131,18 +120,6 @@ export default function Closing() {
           </ScrollReveal>
 
         </div>
-
-        {/* Disclaimer */}
-        <ScrollReveal delay={0.3}>
-          <div className="mt-16 border-t border-white/10 pt-8">
-            <p className="text-white/35 text-xs text-center leading-relaxed max-w-2xl mx-auto">
-              El trading implica riesgo y no existen ganancias garantizadas. La formación, la comunidad
-              y las herramientas de Revolution pueden ayudarte a aprender y operar con más criterio,
-              pero cada decisión es responsabilidad del usuario. Pasado desempeño no garantiza
-              resultados futuros.
-            </p>
-          </div>
-        </ScrollReveal>
 
       </div>
     </section>

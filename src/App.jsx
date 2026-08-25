@@ -1,29 +1,27 @@
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
-import Navbar from './components/layout/Navbar'
-import StickyCTA from './components/layout/StickyCTA'
-import Hero from './components/sections/Hero'
-import TrustBlock from './components/sections/TrustBlock'
-import AppFormation from './components/sections/AppFormation'
-import PersonalStory from './components/sections/PersonalStory'
-import Becas from './components/sections/Becas'
-import FAQs from './components/sections/FAQs'
-import Closing from './components/sections/Closing'
+import { useState } from 'react'
+import InstitutionalPage from './pages/InstitutionalPage'
+import VariantWhatsappPage from './pages/VariantWhatsappPage'
+import VariantBookingPage from './pages/VariantBookingPage'
+import { resolveLandingVariant } from './utils/variantResolver'
 
 export default function App() {
+  const [variant] = useState(() => resolveLandingVariant())
+
+  if (import.meta.env.DEV) {
+    console.log('Landing variant:', variant ?? 'institutional')
+  }
+
+  const page = variant === 'A'
+    ? <VariantWhatsappPage />
+    : variant === 'B'
+      ? <VariantBookingPage />
+      : <InstitutionalPage />
+
   return (
     <>
-      <Navbar />
-      <main>
-        <Hero />
-        <TrustBlock />
-        <AppFormation />
-        <PersonalStory />
-        <Becas />
-        <FAQs />
-        <Closing />
-      </main>
-      <StickyCTA />
+      {page}
       <Analytics />
       <SpeedInsights />
     </>

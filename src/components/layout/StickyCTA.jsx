@@ -6,7 +6,7 @@ import CTAButton from '../ui/CTAButton'
  * StickyCTA — barra fija inferior en mobile, visible después del hero.
  * Solo se muestra en md hacia abajo (oculta en desktop con md:hidden).
  */
-export default function StickyCTA() {
+export default function StickyCTA({ label = 'Reservar mi beca', href }) {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -32,8 +32,8 @@ export default function StickyCTA() {
             className="bg-warm-white/95 dark:bg-dk-bg/95 backdrop-blur-md border-t border-charcoal/10 dark:border-white/10 px-4 pt-3"
             style={{ paddingBottom: 'max(12px, env(safe-area-inset-bottom, 12px))' }}
           >
-            <CTAButton size="default" className="w-full justify-center text-center">
-              Reservar mi beca
+            <CTAButton href={href} size="default" className="w-full justify-center text-center">
+              {label}
             </CTAButton>
           </div>
         </motion.div>

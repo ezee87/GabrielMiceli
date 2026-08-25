@@ -9,7 +9,7 @@ import { WHATSAPP_GENERAL_QUESTION_URL } from '../../constants'
 
 // Imagen requerida: /public/images/gabriel-laptop-cancun.jpg
 
-export default function PersonalStory() {
+export default function PersonalStory({ compact = false, ctaHref = WHATSAPP_GENERAL_QUESTION_URL, ctaLabel = 'Quiero que me expliques', showCta = true, showDivider = false, hideCtaOnMobile = false }) {
   const sectionRef = useRef(null)
 
   useGSAP(
@@ -39,68 +39,65 @@ export default function PersonalStory() {
   return (
     <section
       ref={sectionRef}
-      className="bg-ocean dark:bg-dk-surface grain-overlay py-20 lg:py-28 overflow-hidden"
+      className={`bg-ocean dark:bg-dk-surface grain-overlay overflow-hidden ${compact ? 'py-12 lg:py-16' : showDivider ? 'pt-16 pb-0 lg:pt-20 lg:pb-0' : 'py-16 lg:py-20'}`}
     >
       <div className="container mx-auto px-6 lg:px-10 max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
           {/* Columna texto */}
           <div>
             <ScrollReveal>
               <SectionEyebrow light>Mi camino</SectionEyebrow>
-              <h2 className="font-display font-extrabold text-white text-balance leading-tight tracking-tight text-3xl sm:text-4xl lg:text-5xl mb-7">
-                Yo también empecé desde cero
+              <h2 className="font-display font-extrabold text-white text-balance leading-tight tracking-tight text-3xl sm:text-4xl lg:text-[2.5rem] mb-6">
+                Yo también empecé con dudas
               </h2>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
               <p className="text-white/80 text-base lg:text-lg leading-relaxed mb-5">
-                Cuando conocí Revolution no estaba buscando solamente aprender trading.
-                Estaba buscando algo más grande: una habilidad que dependiera de mí,
-                una forma de entender mejor el dinero y una puerta para construir otra vida.
+                {compact
+                  ? 'Cuando conocí Revolution no estaba buscando una fórmula mágica. Estaba buscando una habilidad que me ayudara a entender mejor el dinero, tomar mejores decisiones y construir algo que dependiera más de mí.'
+                  : 'Cuando conocí Revolution, no estaba buscando solamente aprender trading. Quería entender mejor el dinero, tomar mejores decisiones y encontrar una habilidad que dependiera más de mí.'}
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={0.15}>
               <p className="text-white/70 text-base leading-relaxed mb-5">
-                No fue magia. Fue estudiar, equivocarme, practicar, escuchar clases,
-                rodearme de personas que estaban en el mismo camino y seguir.
+                {compact
+                  ? 'No fue de un día para el otro. Fue estudiar, equivocarme, practicar, escuchar clases y rodearme de personas que estaban en el mismo camino.'
+                  : 'No fue de un día para el otro. Fue estudiar, equivocarme, practicar, escuchar clases y rodearme de personas que estaban en el mismo camino.'}
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
               <p className="text-white/80 text-base leading-relaxed mb-8">
-                Hoy vivo en Cancún, México, cumpliendo parte de ese sueño que antes parecía lejano.
-                Y por eso conecto mucho con quienes quieren empezar: porque sé lo que es tener ganas
-                de cambiar, pero también tener dudas, miedo o desconfianza.
+                {compact
+                  ? 'Por eso hoy me gusta explicarlo con claridad: porque sé lo que es tener ganas de empezar, pero también tener dudas.'
+                  : 'Hoy mi rol es ayudarte a entender el sistema con claridad: qué incluye cada acceso, cómo se usa el capital, qué podés esperar y qué opción tiene más sentido para vos.'}
               </p>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.25}>
+            {!compact && <ScrollReveal delay={0.25}>
               <div className="bg-white/8 dark:bg-white/5 border border-white/15 dark:border-white/10 rounded-2xl px-6 py-5 mb-8">
                 <p className="text-white font-semibold text-base lg:text-lg leading-snug italic">
-                  "Mi trabajo es explicarte todo claro para que sepas si esto es para vos
-                  y con qué beca te conviene entrar."
+                  “Mi trabajo es explicarte todo claro para que sepas si esto es para vos y por dónde te conviene empezar.”
                 </p>
                 <p className="text-white/50 text-sm mt-2">— Gabriel Miceli</p>
               </div>
-            </ScrollReveal>
+            </ScrollReveal>}
 
-            <ScrollReveal delay={0.3}>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <CTAButton variant="primary-light" size="large" href={WHATSAPP_GENERAL_QUESTION_URL}>
-                  Quiero que me expliques
+            {showCta && <ScrollReveal delay={0.3}>
+              <div className={`${hideCtaOnMobile ? 'hidden md:flex' : 'flex'} flex-col sm:flex-row gap-3`}>
+                <CTAButton variant="primary-light" size="large" href={ctaHref}>
+                  {ctaLabel}
                 </CTAButton>
               </div>
-              <p className="text-white/50 text-sm mt-3">
-                Hablamos por chat, sin compromiso.
-              </p>
-            </ScrollReveal>
+            </ScrollReveal>}
           </div>
 
           {/* Columna foto */}
           <ScrollReveal delay={0.15} className="flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[420px]">
+            <div className={`relative w-full ${compact ? 'max-w-[350px]' : 'max-w-[380px]'}`}>
 
               {/* Foto principal */}
               <div className="story-photo relative rounded-4xl overflow-hidden aspect-[4/5] shadow-[0_30px_80px_-15px_rgba(0,0,0,0.5)]">
@@ -134,6 +131,18 @@ export default function PersonalStory() {
 
         </div>
       </div>
+      {showDivider && (
+        <>
+          {/* Mobile: mt controla el aire después de Mi Camino; mb controla el aire antes de Cupos. */}
+          <div aria-hidden="true" className="relative mx-auto mb-16 mt-16 h-px w-[74%] bg-gradient-to-r from-transparent via-turquoise/90 to-transparent shadow-[0_0_12px_rgba(24,183,181,0.42),0_0_26px_rgba(24,183,181,0.2)] lg:hidden">
+            <span className="absolute left-1/2 top-1/2 h-px w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-turquoise/45 blur-[0.5px]" />
+          </div>
+          {/* Desktop: conservar las medidas y la intensidad existentes. */}
+          <div aria-hidden="true" className="relative mx-auto mb-20 mt-16 hidden h-px w-[58%] max-w-[680px] bg-gradient-to-r from-transparent via-turquoise/70 to-transparent shadow-[0_0_12px_rgba(24,183,181,0.28),0_0_24px_rgba(24,183,181,0.14)] lg:block">
+            <span className="absolute left-1/2 top-1/2 h-px w-28 -translate-x-1/2 -translate-y-1/2 rounded-full bg-turquoise/35 blur-[0.5px]" />
+          </div>
+        </>
+      )}
     </section>
   )
 }

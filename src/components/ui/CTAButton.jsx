@@ -21,13 +21,13 @@ export default function CTAButton({
   ...rest
 }) {
   const base =
-    'inline-flex items-center justify-center font-semibold rounded-full transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 whitespace-nowrap'
+    'inline-flex items-center justify-center text-center font-bold rounded-full transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2'
 
   const variants = {
     primary:
-      'bg-ocean text-white hover:bg-deep-teal shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-ocean dark:bg-turquoise dark:text-dk-bg dark:hover:bg-dk-blue dark:focus-visible:ring-turquoise',
+      'bg-turquoise text-white shadow-[0_0_28px_rgba(24,183,181,0.28)] hover:bg-dk-blue hover:text-white hover:shadow-[0_0_36px_rgba(77,220,216,0.38)] hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-turquoise',
     'primary-light':
-      'bg-white text-ocean hover:bg-warm-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-white dark:bg-dk-blue dark:text-dk-bg dark:hover:bg-turquoise',
+      'bg-turquoise text-white shadow-[0_0_28px_rgba(24,183,181,0.28)] hover:bg-dk-blue hover:text-white hover:shadow-[0_0_36px_rgba(77,220,216,0.38)] hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-turquoise',
     secondary:
       'bg-transparent text-ocean border-2 border-ocean hover:bg-ocean/5 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-ocean dark:text-dk-blue dark:border-dk-blue/60 dark:hover:bg-dk-blue/10 dark:focus-visible:ring-dk-blue',
     'secondary-light':
@@ -35,9 +35,9 @@ export default function CTAButton({
   }
 
   const sizes = {
-    sm: 'px-5 py-2.5 text-sm',
-    default: 'px-7 py-3.5 text-sm',
-    large: 'px-9 py-4 text-base',
+    sm: 'px-6 py-3 text-sm',
+    default: 'px-8 py-4 text-sm',
+    large: 'px-10 py-[1.1rem] text-base',
   }
 
   const url = href ?? WHATSAPP_RESERVE_URL

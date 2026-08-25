@@ -6,12 +6,16 @@ import ScrollReveal from '../ui/ScrollReveal'
 
 const faqs = [
   {
-    q: '¿Esto es un curso pago?',
-    a: 'No funciona como un curso tradicional. El acceso se habilita depositando capital en tu propia cuenta de trading en Exness. Ese dinero no se lo transferís a Gabriel ni a Revolution. Accedés a la formación, comunidad y herramientas a través de tu cuenta habilitada.',
+    q: '¿Esto es real o es una estafa?',
+    a: 'Es una duda válida. Antes de avanzar te explico cómo funciona el acceso, qué incluye cada beca, dónde queda tu capital y qué riesgos implica el trading para que decidas con información.',
   },
   {
-    q: '¿La plata queda a mi nombre?',
-    a: 'Sí. Abrís tu cuenta en Exness con tus datos, tu nombre y tu documento. El capital queda en tu propia cuenta para que puedas operar. Gabriel ni Revolution tienen acceso a esos fondos.',
+    q: '¿A quién le doy mi dinero?',
+    a: 'El capital se deposita en una cuenta de trading abierta con tus propios datos. No se lo transferís a Gabriel ni a Revolution, y ellos no tienen acceso a esos fondos.',
+  },
+  {
+    q: '¿Esto es un curso pago?',
+    a: 'No funciona como un curso tradicional. El acceso se habilita depositando capital en tu propia cuenta de trading en Exness. Ese dinero no se lo transferís a Gabriel ni a Revolution. Accedés a la formación, comunidad y herramientas a través de tu cuenta habilitada.',
   },
   {
     q: '¿Necesito experiencia previa?',
@@ -27,7 +31,7 @@ const faqs = [
   },
   {
     q: '¿Hay resultados garantizados?',
-    a: 'No. El trading implica riesgo. Revolution te da formación, comunidad y herramientas, pero los resultados dependen de tu práctica, disciplina, gestión del riesgo y decisiones. Nadie puede garantizar resultados en el trading.',
+    a: 'No. El trading implica riesgo. Lo que sí tenés es formación, comunidad y una estructura para aprender con más claridad antes de operar por tu cuenta.',
   },
   {
     q: '¿Tengo que hacer una llamada?',
@@ -35,15 +39,45 @@ const faqs = [
   },
 ]
 
-export default function FAQs() {
+const institutionalFaqs = [
+  { q: '¿Esto es real o es una estafa?', a: 'La idea es que puedas entenderlo antes de tomar una decisión. Revolution funciona como un ecosistema de formación, comunidad y recursos. No se presenta como una promesa de ganancias garantizadas.' },
+  { q: '¿A quién le doy mi dinero?', a: 'No me pagás a mí ni le transferís dinero a Revolution. Abrís tu cuenta en Exness con tus datos y el capital queda en tu propia cuenta.' },
+  { q: '¿Esto es un curso pago?', a: 'No es un curso tradicional suelto. Entrás con una beca de acceso que habilita distintos niveles de formación, comunidad, clases, app y recursos dentro de Revolution.' },
+  { q: '¿Necesito experiencia previa?', a: 'No necesariamente. Hay accesos pensados para empezar desde cero y otros para quienes quieren avanzar con más herramientas.' },
+  { q: '¿Puedo estudiar si tengo poco tiempo?', a: 'Sí. La app incluye módulos grabados y recursos para estudiar cuando puedas. También existen espacios en vivo para quienes quieran participar.' },
+  { q: '¿Cuál beca me conviene?', a: 'Depende de tu experiencia, tu capital y el nivel de acompañamiento o recursos que quieras desbloquear. Por eso te ayudo a comparar antes de elegir.' },
+  { q: '¿Hay resultados garantizados?', a: 'No. El trading implica riesgo y no existen ganancias garantizadas. La formación puede ayudarte a aprender con más criterio, pero cada decisión es responsabilidad del usuario.' },
+  { q: '¿Tengo que hacer una llamada?', a: 'No necesariamente. Podés escribirme por WhatsApp y te explico primero por mensaje. Si después tiene sentido, podemos coordinar una consulta.' },
+]
+
+export default function FAQs({
+  ctaHref,
+  ctaLabel = 'Resolver mis dudas',
+  microcopy = 'Te respondo por WhatsApp y te explico todo antes de que decidas.',
+  conversion = false,
+  showCta = true,
+  hideCtaOnMobile = false,
+}) {
+  const displayedFaqs = conversion
+    ? faqs.map((faq) => {
+        if (faq.q === '¿Esto es un curso pago?') {
+          return {
+            ...faq,
+            a: 'No funciona como un curso tradicional. El acceso se habilita depositando capital en tu propia cuenta de trading en Exness. Ese dinero no me lo transferís a mí ni a Revolution. Accedés a la formación, comunidad y herramientas a través de tu cuenta habilitada.',
+          }
+        }
+        return faq
+      })
+    : institutionalFaqs
+
   return (
-    <section id="faqs" className="bg-sand dark:bg-dk-surface py-20 lg:py-28">
+    <section id="faqs" className="scroll-mt-16 bg-sand dark:bg-dk-surface py-14 lg:py-20">
       <div className="container mx-auto px-6 lg:px-10 max-w-3xl">
 
         <ScrollReveal>
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <SectionEyebrow>¿Tenés dudas?</SectionEyebrow>
-            <h2 className="font-display font-extrabold text-charcoal dark:text-dk-text text-balance leading-tight tracking-tight text-3xl sm:text-4xl lg:text-5xl">
+            <h2 className="font-display font-extrabold text-charcoal dark:text-dk-text text-balance leading-tight tracking-tight text-3xl sm:text-4xl lg:text-[2.5rem]">
               Preguntas frecuentes antes de entrar
             </h2>
           </div>
@@ -51,21 +85,21 @@ export default function FAQs() {
 
         {/* Accordion */}
         <ScrollReveal delay={0.1}>
-          <div className="bg-white dark:bg-dk-card rounded-4xl overflow-hidden border border-charcoal/8 dark:border-white/10 shadow-sm divide-y divide-charcoal/8 dark:divide-white/10 mb-10">
-            {faqs.map((faq, i) => (
+          <div className="bg-white dark:bg-dk-card rounded-4xl overflow-hidden border border-charcoal/8 dark:border-white/10 shadow-sm divide-y divide-charcoal/8 dark:divide-white/10 mb-8">
+            {displayedFaqs.map((faq, i) => (
               <FAQItem key={i} question={faq.q} answer={faq.a} />
             ))}
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.15}>
-          <div className="flex flex-col items-center gap-3">
-            <CTAButton size="large">Resolver mis dudas</CTAButton>
+        {showCta && <ScrollReveal delay={0.15}>
+          <div className={`${hideCtaOnMobile ? 'hidden md:flex' : 'flex'} flex-col items-center gap-3`}>
+            <CTAButton href={ctaHref} size="large">{ctaLabel}</CTAButton>
             <p className="text-sm text-muted dark:text-dk-muted text-center">
-              Te respondo por WhatsApp y te explico todo antes de que decidas.
+              {microcopy}
             </p>
           </div>
-        </ScrollReveal>
+        </ScrollReveal>}
 
       </div>
     </section>
@@ -80,7 +114,7 @@ function FAQItem({ question, answer }) {
     <div>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between gap-4 px-7 py-5 lg:py-6 text-left hover:bg-charcoal/3 dark:hover:bg-white/5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquoise focus-visible:ring-inset"
+        className="w-full flex items-center justify-between gap-4 px-6 lg:px-7 py-4 lg:py-5 text-left hover:bg-charcoal/3 dark:hover:bg-white/5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquoise focus-visible:ring-inset"
         aria-expanded={isOpen}
       >
           <span className="font-semibold text-charcoal dark:text-dk-text text-sm lg:text-base leading-snug">
@@ -106,7 +140,7 @@ function FAQItem({ question, answer }) {
             transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
             className="overflow-hidden"
           >
-            <p className="px-7 pb-5 text-muted dark:text-dk-muted text-sm lg:text-base leading-relaxed">
+            <p className="px-6 lg:px-7 pb-4 text-muted dark:text-dk-muted text-sm lg:text-base leading-relaxed">
               {answer}
             </p>
           </motion.div>
