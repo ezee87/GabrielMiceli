@@ -11,35 +11,47 @@ import TrustBlock from '../components/sections/TrustBlock'
 import PersonalStory from '../components/sections/PersonalStory'
 import Becas from '../components/sections/Becas'
 import FAQs from '../components/sections/FAQs'
-import { WHATSAPP_URL } from '../constants'
+import { WHATSAPP_URL, BOOKING_URL } from '../constants'
+import CalendlyPopupProvider, { useCalendlyPopup } from '../context/CalendlyPopupContext'
 
 export default function VariantLandingPage({ variant }) {
+  return (
+    <CalendlyPopupProvider>
+      <VariantLandingContent variant={variant} />
+    </CalendlyPopupProvider>
+  )
+}
+
+function VariantLandingContent({ variant }) {
+  const { openCalendly } = useCalendlyPopup()
   const isBooking = variant === 'B'
-  const primaryHref = isBooking ? '#booking' : WHATSAPP_URL
+  const primaryHref = isBooking ? BOOKING_URL : WHATSAPP_URL
   const primaryLabel = isBooking ? 'Agendar consulta de 15 min' : 'Quiero que me expliques mi beca'
+  const primaryOnClick = isBooking ? openCalendly : undefined
 
   return (
     <div className="variant-landing dark min-h-screen bg-dk-bg text-dk-text">
-      <Navbar brand="Gabriel Miceli" ctaLabel={primaryLabel} ctaHref={primaryHref} invertedAtTop mobileLogoOnly />
+      <Navbar brand="Gabriel Miceli" ctaLabel={primaryLabel} ctaHref={primaryHref} ctaOnClick={primaryOnClick} invertedAtTop mobileLogoOnly />
       <main>
-        <VariantHero variant={variant} primaryHref={primaryHref} />
+        <VariantHero variant={variant} primaryHref={primaryHref} primaryOnClick={primaryOnClick} />
         <SectionDivider />
-        <TrustBlock conversion ctaHref={primaryHref} ctaLabel={primaryLabel} hideCtaOnMobile />
+        <TrustBlock conversion ctaHref={primaryHref} ctaLabel={primaryLabel} ctaOnClick={primaryOnClick} hideCtaOnMobile />
         <SectionDivider />
         {isBooking ? <BookingSection /> : <WhatsappSection ctaHref={WHATSAPP_URL} />}
         <SectionDivider />
-        <PersonalStory compact ctaHref={primaryHref} ctaLabel={primaryLabel} hideCtaOnMobile />
+        <PersonalStory compact ctaHref={primaryHref} ctaLabel={primaryLabel} ctaOnClick={primaryOnClick} hideCtaOnMobile />
         <SectionDivider />
-        <VariantSystemSection ctaHref={primaryHref} ctaLabel={primaryLabel} />
+        <VariantSystemSection ctaHref={primaryHref} ctaLabel={primaryLabel} ctaOnClick={primaryOnClick} />
         <SectionDivider />
         <Becas
           variant={variant}
           title="Elegí tu beca de acceso"
           subtitle="Si no sabés cuál elegir, te ayudo a decidir según tu experiencia, tu capital y tus objetivos."
+          ctaOnClick={primaryOnClick}
           hideCtasOnMobile
         />
         <SectionDivider />
-        <VariantFinalCta variant={variant} ctaHref={primaryHref} />
+        <VariantFinalCta variant={variant} ctaHref={primaryHref} ctaOnClick={primaryOnClick} />
         <SectionDivider />
         <InstitutionalLinkSection />
         <SectionDivider />
@@ -47,6 +59,7 @@ export default function VariantLandingPage({ variant }) {
           conversion
           ctaHref={primaryHref}
           ctaLabel={primaryLabel}
+          ctaOnClick={primaryOnClick}
           microcopy={isBooking ? 'Una llamada breve, sin compromiso, para resolver tus dudas antes de decidir.' : undefined}
           hideCtaOnMobile
         />

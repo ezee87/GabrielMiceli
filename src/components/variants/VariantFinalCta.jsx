@@ -4,7 +4,7 @@ import ScrollReveal from '../ui/ScrollReveal'
 import { useEffect, useRef, useState } from 'react'
 import { getAvailableScholarships } from '../../utils/scholarships'
 
-export default function VariantFinalCta({ variant, ctaHref }) {
+export default function VariantFinalCta({ variant, ctaHref, ctaOnClick }) {
   const isBooking = variant === 'B'
   const availableScholarships = getAvailableScholarships()
   const [count, setCount] = useState(0)
@@ -45,7 +45,7 @@ export default function VariantFinalCta({ variant, ctaHref }) {
           <p className="mx-auto mb-9 max-w-2xl text-base leading-relaxed text-white/70 lg:text-lg">
             Si querés entender cómo funciona Revolution y qué beca tiene sentido para vos, este es el momento de escribirme o coordinar una consulta.
           </p>
-          <CTAButton href={ctaHref} variant="primary-light" size="large">
+          <CTAButton href={ctaHref} onClick={ctaOnClick} variant="primary-light" size="large">
             {isBooking ? 'Agendar consulta de 15 min' : 'Quiero que me expliques mi beca'}
           </CTAButton>
           <p className="mt-4 text-sm font-medium leading-relaxed text-white/65">

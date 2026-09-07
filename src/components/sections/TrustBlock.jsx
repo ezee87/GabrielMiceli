@@ -29,7 +29,7 @@ const trustPoints = [
   },
 ]
 
-export default function TrustBlock({ conversion = false, ctaHref = WHATSAPP_GENERAL_QUESTION_URL, ctaLabel = 'Quiero que me expliques', showCta = true, hideCtaOnMobile = false }) {
+export default function TrustBlock({ conversion = false, ctaHref = WHATSAPP_GENERAL_QUESTION_URL, ctaLabel = 'Quiero que me expliques', ctaOnClick, showCta = true, hideCtaOnMobile = false }) {
   const sectionRef = useRef(null)
   const denialItems = conversion
     ? [
@@ -115,7 +115,7 @@ export default function TrustBlock({ conversion = false, ctaHref = WHATSAPP_GENE
 
           <ScrollReveal delay={0.15}>
             <div className={`mt-9 flex-col items-center text-center ${hideCtaOnMobile ? 'hidden md:flex' : 'flex'}`}>
-              <CTAButton size="large" href={ctaHref}>{ctaLabel}</CTAButton>
+              <CTAButton size="large" href={ctaHref} onClick={ctaOnClick}>{ctaLabel}</CTAButton>
             </div>
           </ScrollReveal>
         </div>
@@ -211,7 +211,7 @@ export default function TrustBlock({ conversion = false, ctaHref = WHATSAPP_GENE
         {/* CTA */}
         {showCta && <ScrollReveal delay={0.15}>
           <div className={`mt-6 flex-col items-center ${hideCtaOnMobile ? 'hidden md:flex' : 'flex'}`}>
-            <CTAButton variant="primary-light" size="large" href={ctaHref}>
+            <CTAButton variant="primary-light" size="large" href={ctaHref} onClick={ctaOnClick}>
               {conversion ? 'Quiero que me expliques' : 'Quiero entender cómo funciona'}
             </CTAButton>
           </div>

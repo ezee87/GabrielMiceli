@@ -10,6 +10,7 @@ import {
   WHATSAPP_INTERMEDIATE_URL,
   WHATSAPP_ADVANCED_URL,
   WHATSAPP_URL,
+  BOOKING_URL,
 } from '../../constants'
 
 const becas = [
@@ -73,6 +74,7 @@ export default function Becas({
   subtitle = 'Hay tres accesos disponibles. Si no sabés cuál elegir, me escribís y te recomiendo la opción más conveniente según tu experiencia, capital y objetivo.',
   ctaHref,
   ctaLabel,
+  ctaOnClick,
   hideCtasOnMobile = false,
 }) {
   const becasRef = useRef(null)
@@ -136,7 +138,7 @@ export default function Becas({
         {/* Cards — 3 columnas en desktop, alineadas y estiradas */}
         <div className={`grid gap-10 md:grid-cols-3 md:gap-6 items-stretch ${institutional ? 'mt-12 lg:mt-16' : ''}`} id="becas-grid">
           {becas.map((beca) => (
-            <BecaCard key={beca.id} beca={beca} variant={variant} ctaHref={institutional ? WHATSAPP_URL : ctaHref} ctaLabel={ctaLabel} hideCta={institutional} hideCtaOnMobile={hideCtasOnMobile} />
+            <BecaCard key={beca.id} beca={beca} variant={variant} ctaHref={institutional ? WHATSAPP_URL : ctaHref} ctaLabel={ctaLabel} ctaOnClick={institutional ? undefined : ctaOnClick} hideCta={institutional} hideCtaOnMobile={hideCtasOnMobile} />
           ))}
         </div>
 
@@ -149,7 +151,7 @@ export default function Becas({
                   ? 'Escribime y vemos cuál tiene más sentido para vos.'
                   : '¿No sabés cuál elegir? Escribime y te ayudo a encontrar la beca correcta.'}
             </p>
-            <CTAButton href={variant === 'B' ? '#booking' : WHATSAPP_URL} variant="secondary" size="sm">
+            <CTAButton href={variant === 'B' ? BOOKING_URL : WHATSAPP_URL} onClick={variant === 'B' ? ctaOnClick : undefined} variant="secondary" size="sm">
               {variant === 'B' ? 'Agendar consulta de 15 min' : variant === 'institutional' ? 'Quiero que me recomiendes una beca' : 'Quiero que me expliques mi beca'}
             </CTAButton>
           </div>
@@ -160,7 +162,7 @@ export default function Becas({
   )
 }
 
-function BecaCard({ beca, variant, ctaHref, ctaLabel, hideCta = false, hideCtaOnMobile = false }) {
+function BecaCard({ beca, variant, ctaHref, ctaLabel, ctaOnClick, hideCta = false, hideCtaOnMobile = false }) {
   const { name, price, tagline, features, cta, microcopy, featured, badge, href } = beca
   const displayedTagline = variant === 'institutional' && beca.id === 'avanzada'
     ? 'Para acceder a la experiencia más completa de Revolution desde el inicio.'
@@ -169,7 +171,7 @@ function BecaCard({ beca, variant, ctaHref, ctaLabel, hideCta = false, hideCtaOn
   const variantCta = variant === 'B'
     ? 'Consultar en llamada'
     : (beca.id === 'avanzada' ? 'Consultar beca avanzada' : cta)
-  const variantHref = variant === 'B' ? '#booking' : href
+  const variantHref = variant === 'B' ? BOOKING_URL : href
   const displayedMicrocopy = beca.id === 'avanzada'
     ? 'La opción que más recomiendo si querés entrar con el ecosistema completo.'
     : microcopy
@@ -243,6 +245,7 @@ function BecaCard({ beca, variant, ctaHref, ctaLabel, hideCta = false, hideCtaOn
         <div className="flex flex-col gap-2">
           {!hideCta && <CTAButton
             href={ctaHref ?? variantHref}
+            onClick={variant === 'B' ? ctaOnClick : undefined}
             variant={featured ? 'primary' : 'secondary'}
             size="default"
               className={`h-12 w-full whitespace-nowrap !px-3 !py-0 text-center !text-[13px] ${hideCtaOnMobile ? 'hidden md:inline-flex' : ''}`}

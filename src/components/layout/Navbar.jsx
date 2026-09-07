@@ -5,6 +5,7 @@ export default function Navbar({
   brand = 'Gabriel Miceli',
   ctaLabel = 'Reservar mi beca',
   ctaHref,
+  ctaOnClick,
   ctaVariant = 'primary',
   navItems,
   mobileLogoOnly = false,
@@ -67,7 +68,7 @@ export default function Navbar({
           </nav>
         ) : (
           <div className={`${mobileLogoOnly ? 'hidden md:flex' : 'flex'} items-center gap-3`}>
-            <CTAButton href={ctaHref} variant={ctaVariant} size="sm" className="!px-4 !py-2 !text-[11px] !shadow-none sm:!px-5 sm:!text-xs">
+            <CTAButton href={ctaHref} onClick={ctaOnClick} variant={ctaVariant} size="sm" className="!px-4 !py-2 !text-[11px] !shadow-none sm:!px-5 sm:!text-xs">
               {ctaLabel}
             </CTAButton>
           </div>

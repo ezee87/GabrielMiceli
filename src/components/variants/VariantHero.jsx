@@ -12,7 +12,7 @@ const copyByVariant = {
   },
 }
 
-export default function VariantHero({ variant, primaryHref }) {
+export default function VariantHero({ variant, primaryHref, primaryOnClick }) {
   const copy = copyByVariant[variant]
 
   return (
@@ -54,7 +54,7 @@ export default function VariantHero({ variant, primaryHref }) {
             <p className="text-sm font-semibold leading-relaxed text-turquoise sm:text-base">
               Primero entendés cómo funciona.<br />Después decidís si querés avanzar.
             </p>
-            <CTAButton href={primaryHref} variant="primary-light" size="large">{copy.cta}</CTAButton>
+            <CTAButton href={primaryHref} onClick={primaryOnClick} variant="primary-light" size="large">{copy.cta}</CTAButton>
           </div>
         </ScrollReveal>
       </div>

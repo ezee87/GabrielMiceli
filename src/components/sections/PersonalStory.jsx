@@ -9,7 +9,7 @@ import { WHATSAPP_GENERAL_QUESTION_URL } from '../../constants'
 
 // Imagen requerida: /public/images/gabriel-laptop-cancun.jpg
 
-export default function PersonalStory({ compact = false, ctaHref = WHATSAPP_GENERAL_QUESTION_URL, ctaLabel = 'Quiero que me expliques', showCta = true, showDivider = false, hideCtaOnMobile = false }) {
+export default function PersonalStory({ compact = false, ctaHref = WHATSAPP_GENERAL_QUESTION_URL, ctaLabel = 'Quiero que me expliques', ctaOnClick, showCta = true, showDivider = false, hideCtaOnMobile = false }) {
   const sectionRef = useRef(null)
 
   useGSAP(
@@ -88,7 +88,7 @@ export default function PersonalStory({ compact = false, ctaHref = WHATSAPP_GENE
 
             {showCta && <ScrollReveal delay={0.3}>
               <div className={`${hideCtaOnMobile ? 'hidden md:flex' : 'flex'} flex-col sm:flex-row gap-3`}>
-                <CTAButton variant="primary-light" size="large" href={ctaHref}>
+                <CTAButton variant="primary-light" size="large" href={ctaHref} onClick={ctaOnClick}>
                   {ctaLabel}
                 </CTAButton>
               </div>

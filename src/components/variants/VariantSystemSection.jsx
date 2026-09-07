@@ -11,7 +11,7 @@ const items = [
   ['Becas de acceso', 'Opciones de 300, 600 y 1.000 USD según el nivel de herramientas que quieras desbloquear.'],
 ]
 
-export default function VariantSystemSection({ ctaHref = '#becas', ctaLabel = 'Ver becas disponibles' }) {
+export default function VariantSystemSection({ ctaHref = '#becas', ctaLabel = 'Ver becas disponibles', ctaOnClick }) {
   return (
     <section className="bg-soft-gray py-12 dark:bg-dk-bg lg:py-16">
       <div className="container mx-auto max-w-4xl px-6 lg:px-8">
@@ -44,7 +44,7 @@ export default function VariantSystemSection({ ctaHref = '#becas', ctaLabel = 'V
 
         <ScrollReveal delay={0.12}>
           <div className="mt-9 text-center">
-            <CTAButton href={ctaHref} size="large">{ctaLabel}</CTAButton>
+            <CTAButton href={ctaHref} onClick={ctaOnClick} size="large">{ctaLabel}</CTAButton>
           </div>
         </ScrollReveal>
       </div>

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import SectionEyebrow from '../ui/SectionEyebrow'
 import CTAButton from '../ui/CTAButton'
 import ScrollReveal from '../ui/ScrollReveal'
@@ -53,6 +52,7 @@ const institutionalFaqs = [
 export default function FAQs({
   ctaHref,
   ctaLabel = 'Resolver mis dudas',
+  ctaOnClick,
   microcopy = 'Te respondo por WhatsApp y te explico todo antes de que decidas.',
   conversion = false,
   showCta = true,
@@ -94,7 +94,7 @@ export default function FAQs({
 
         {showCta && <ScrollReveal delay={0.15}>
           <div className={`${hideCtaOnMobile ? 'hidden md:flex' : 'flex'} flex-col items-center gap-3`}>
-            <CTAButton href={ctaHref} size="large">{ctaLabel}</CTAButton>
+            <CTAButton href={ctaHref} onClick={ctaOnClick} size="large">{ctaLabel}</CTAButton>
             <p className="text-sm text-muted dark:text-dk-muted text-center">
               {microcopy}
             </p>
@@ -108,7 +108,7 @@ export default function FAQs({
 
 function FAQItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false)
-  const shouldReduce = useReducedMotion()
+  const itemId = `faq-${question.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`
 
   return (
     <div>
@@ -116,36 +116,26 @@ function FAQItem({ question, answer }) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between gap-4 px-6 lg:px-7 py-4 lg:py-5 text-left hover:bg-charcoal/3 dark:hover:bg-white/5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquoise focus-visible:ring-inset"
         aria-expanded={isOpen}
+        aria-controls={itemId}
       >
           <span className="font-semibold text-charcoal dark:text-dk-text text-sm lg:text-base leading-snug">
           {question}
         </span>
-        <motion.span
-          animate={shouldReduce ? {} : { rotate: isOpen ? 45 : 0 }}
-          transition={{ duration: 0.2, ease: 'easeOut' }}
-          className="flex-shrink-0 w-6 h-6 rounded-full border border-turquoise/40 flex items-center justify-center text-turquoise text-lg font-light leading-none"
+        <span
+          className={`flex-shrink-0 w-6 h-6 rounded-full border border-turquoise/40 flex items-center justify-center text-turquoise text-lg font-light leading-none transition-transform duration-200 motion-reduce:transition-none ${isOpen ? 'rotate-45' : ''}`}
           aria-hidden="true"
         >
           +
-        </motion.span>
+        </span>
       </button>
 
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            key="answer"
-            initial={shouldReduce ? false : { height: 0, opacity: 0 }}
-            animate={shouldReduce ? {} : { height: 'auto', opacity: 1 }}
-            exit={shouldReduce ? {} : { height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
-            className="overflow-hidden"
-          >
+      <div className={`grid transition-[grid-template-rows,opacity] duration-300 motion-reduce:transition-none ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+        <div id={itemId} role="region" aria-hidden={!isOpen} className="overflow-hidden">
             <p className="px-6 lg:px-7 pb-4 text-muted dark:text-dk-muted text-sm lg:text-base leading-relaxed">
               {answer}
             </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+        </div>
+      </div>
     </div>
   )
 }
