@@ -9,5 +9,4 @@ export const WHATSAPP_ADVANCED_URL = 'https://wa.link/ki8nvh'           // Beca 
 // Reemplazar estos placeholders cuando estén disponibles los enlaces de Gabriel.
 export const WHATSAPP_URL = WHATSAPP_GENERAL_QUESTION_URL
 export const BOOKING_URL = 'https://calendly.com/gabriel_miceli/15min'
-// Reemplazar VIDEO_EMBED_URL por link real del video de Gabriel.
-export const VIDEO_EMBED_URL = ''
+export const VIDEO_EMBED_URL = 'https://www.youtube.com/embed/xIBmUzUcBnY?rel=0'
